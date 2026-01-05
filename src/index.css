@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Full-page background */
 body {
   @apply bg-cover bg-center bg-fixed;
@@ -14,16 +13,12 @@ body {
   @apply bg-black/30; /* semi-transparent black overlay */
 }
 
+/* Sliding banner animation */
 @keyframes slide-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 .slide-banner {
-  animation: slide-left 18s linear infinite;
+  animation: slide-left 15s linear infinite;
 }
-
