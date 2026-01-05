@@ -22,3 +22,12 @@ body {
 .slide-banner {
   animation: slide-left 15s linear infinite;
 }
+
+@keyframes fast-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.animate-fast-pulse {
+  animation: fast-pulse .8s infinite;
+}
