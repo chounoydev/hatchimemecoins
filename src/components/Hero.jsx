@@ -7,7 +7,7 @@ export default function Hero() {
           The cutest dog memecoin with real community vibes. Join us and be part of the pack!
         </p>
         <button className="bg-yellow-400 text-hatchiBrown px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors">
-          <a href="https://pump.fun/coin/7zF34R6rkM3Kkpt1yD6EtGDXnCKVndhwMD3HJQ2cpump" className="hover:text-hatchiGold">BUY $HATCHI</a>
+          <a href="https://pump.fun/coin/wAe5eRDhkFWd3yeLUv3962cKKJX1UtD4sCmSVNKACK9" className="hover:text-hatchiGold">BUY $HATCHI</a>
         </button>
       </div>
 
@@ -17,3 +17,4 @@ export default function Hero() {
     </section>
   );
 }
+
