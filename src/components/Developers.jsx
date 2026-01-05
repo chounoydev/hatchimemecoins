@@ -46,20 +46,6 @@ export default function Developers() {
         </div>
       </section>
 
-      {/* LOWER Sliding Banner */}
-    {/* LOWER Sliding Banner */}
-<div className="w-full h-10 bg-hatchiGold overflow-hidden flex items-center">
-  <div className="flex whitespace-nowrap font-bold text-black slide-banner">
-    <span className="mx-8">🐶 $HATCHI SOLDIERS</span>
-    <span className="mx-8">🎯 GOAL $5M MARKET CAP</span>
-    <span className="mx-8">💰 BUY MORE $HATCHI</span>
-    <span className="mx-8">📈 THE NEXT TRENDING MEMECOIN ON PUMPFUN.</span>
-     <span className="mx-8">💲 DEX PAID</span>
-      <span className="mx-8">💊 LAUNCH ON PUMPFUN</span>
-       <span className="mx-8">🤝HODL $HATCHI </span>
-  </div>
-</div>
-
     </>
   );
 }
