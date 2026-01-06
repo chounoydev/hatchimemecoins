@@ -13,7 +13,7 @@ export default function App() {
   useEffect(() => {
     const enableSound = () => {
       if (audioRef.current) {
-        audioRef.current.muted = false; // 🔊 UNMUTE
+        audioRef.current.muted = false; // 🔊 unmute on first click
         audioRef.current.play();
         document.removeEventListener("click", enableSound);
       }
@@ -27,11 +27,24 @@ export default function App() {
   }, []);
 
   return (
-    <div
-      className="font-modern text-white bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: "url('/bg.png')" }}
-    >
-      {/* 🎵 Background Music */}
+    <>
+      {/* 🎥 VIDEO BACKGROUND */}
+      <div className="fixed inset-0 -z-20 overflow-hidden">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/hatchibg.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      {/* 🌑 DARK OVERLAY */}
+      <div className="fixed inset-0 -z-10 bg-black/40"></div>
+
+      {/* 🎵 BACKGROUND MUSIC */}
       <audio
         ref={audioRef}
         src="/backgroundmusic.mp3"
@@ -40,7 +53,8 @@ export default function App() {
         muted
       />
 
-      <div className="bg-black/40 min-h-screen">
+      {/* 🌐 SITE CONTENT */}
+      <div className="relative z-10 font-modern text-white min-h-screen">
         <Navbar />
         <Hero />
         <WhatIsHatchi />
@@ -49,6 +63,6 @@ export default function App() {
         <Contact />
         <Footer />
       </div>
-    </div>
+    </>
   );
 }
