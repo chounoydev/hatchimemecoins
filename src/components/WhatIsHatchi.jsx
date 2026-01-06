@@ -43,7 +43,7 @@ export default function WhatIsHatchi() {
 
         <iframe
           title="$HATCHI Live Price"
-          src="https://dexscreener.com/pulsechain/0x7b699036a863a460aa751a23acb1ba09b3393bab"
+          src="https://dexscreener.com/solana/ed47bvi8p5n8bvtlwszizhcv2pzutcpjkxhqdhdjv2nj"
           style={{ width: "100%", height: "400px", border: "none" }}
           allowTransparency="true"
           scrolling="no"
@@ -54,3 +54,4 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
+
