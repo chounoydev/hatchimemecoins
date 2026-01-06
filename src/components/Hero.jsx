@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <button className="bg-yellow-400 text-hatchiBrown px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors">
             <a
-              href="https://pump.fun/coin/7zF34R6rkM3Kkpt1yD6EtGDXnCKVndhwMD3HJQ2cpump"
+              href="#"
               className="hover:text-hatchiGold"
             >
               BUY $HATCHI
@@ -53,3 +53,4 @@ export default function Hero() {
     </section>
   );
 }
+
