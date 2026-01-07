@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhatIsHatchi from "./components/WhatIsHatchi";
@@ -9,22 +9,31 @@ import Footer from "./components/Footer";
 
 export default function App() {
   const audioRef = useRef(null);
+  const [isMusicOn, setIsMusicOn] = useState(true);
 
+  // Enable sound on first click (for browsers that block autoplay)
   useEffect(() => {
     const enableSound = () => {
       if (audioRef.current) {
-        audioRef.current.muted = false; // 🔊 unmute on first click
+        audioRef.current.muted = false;
         audioRef.current.play();
         document.removeEventListener("click", enableSound);
       }
     };
-
     document.addEventListener("click", enableSound);
-
-    return () => {
-      document.removeEventListener("click", enableSound);
-    };
+    return () => document.removeEventListener("click", enableSound);
   }, []);
+
+  // Toggle music on/off
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+    if (isMusicOn) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsMusicOn(!isMusicOn);
+  };
 
   return (
     <>
@@ -50,11 +59,19 @@ export default function App() {
         src="/backgroundmusic.mp3"
         autoPlay
         loop
-        muted
+        muted={false}
       />
 
       {/* 🌐 SITE CONTENT */}
       <div className="relative z-10 font-modern text-white min-h-screen">
+        {/* 🎵 MUSIC TOGGLE BUTTON */}
+        <button
+          onClick={toggleMusic}
+          className="fixed bottom-5 right-5 z-50 p-3 bg-black/50 rounded-full text-xl hover:bg-black/70 transition"
+        >
+          {isMusicOn ? "🔊" : "🔇"}
+        </button>
+
         <Navbar />
         <Hero />
         <WhatIsHatchi />
