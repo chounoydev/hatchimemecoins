@@ -3,7 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Contact() {
   const handleEmailClick = () => {
-    const email = "hatchidev@gmail.com"; // 🔴 CHANGE THIS
+    const email = "hatchidev@gmail.com"; // 🔴 CHANGE THIS TO YOUR EMAIL
     const subject = "Contact Inquiry";
     const body = "Hello,\n\nI would like to get in touch with you.\n\n";
 
@@ -14,9 +14,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-16 px-4 text-center">
-      <h2 className="text-4xl font-playful mb-8 text-yellow-400">
-        Contact Us
-      </h2>
+      <h2 className="text-4xl font-playful mb-8 text-yellow-400">Contact Us</h2>
 
       <p className="mb-10 font-modern">
         Contact us directly or connect with us on social media
@@ -42,6 +40,16 @@ export default function Contact() {
           className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
         >
           <FaXTwitter /> Twitter
+        </a>
+
+        {/* Facebook */}
+        <a
+          href="#" // 🔴 CHANGE THIS TO YOUR PAGE
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
+        >
+          <FaFacebookF /> Facebook
         </a>
 
         {/* Email */}
