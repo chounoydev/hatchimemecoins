@@ -1,63 +1,57 @@
-import { useState } from "react";
+import { FaFacebookF, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Contact() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const handleEmailClick = () => {
+    const email = "hatchidev@gmail.com"; // 🔴 CHANGE THIS
+    const subject = "Contact Inquiry";
+    const body = "Hello,\n\nI would like to get in touch with you.\n\n";
 
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (email) {
-      // Here you can connect to an API or service to save the email
-      setSubmitted(true);
-      setEmail("");
-      setTimeout(() => setSubmitted(false), 3000); // hide success message after 3 seconds
-    }
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
   };
 
   return (
     <section id="contact" className="py-16 px-4 text-center">
-      <h2 className="text-4xl font-playful mb-8 text-yellow-400">Contact Us</h2>
-      <p className="mb-6 font-modern">Join our Telegram or Twitter to stay updated!</p>
+      <h2 className="text-4xl font-playful mb-8 text-yellow-400">
+        Contact Us
+      </h2>
 
-      <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+      <p className="mb-10 font-modern">
+        Contact us directly or connect with us on social media
+      </p>
+
+      {/* Contact Buttons */}
+      <div className="flex flex-col sm:flex-row justify-center gap-6">
+        {/* Telegram */}
         <a
           href="https://t.me/+DjRyRpeurCQ4ZDhl"
-          className="bg-yellow-400 text-hatchiBrown px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
         >
-          Telegram
+          <FaTelegramPlane /> Telegram
         </a>
+
+        {/* Twitter / X */}
         <a
           href="https://x.com/all_Traders25"
-          className="bg-yellow-400 text-hatchiBrown px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
         >
-          Twitter
+          <FaXTwitter /> Twitter
         </a>
-      </div>
 
-      {/* Email Subscription */}
-      <form
-        onSubmit={handleSubscribe}
-        className="flex flex-col sm:flex-row justify-center gap-4 items-center"
-      >
-        <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="px-4 py-3 rounded-full text-black w-full sm:w-64 focus:outline-none"
-          required
-        />
+        {/* Email */}
         <button
-          type="submit"
-          className="bg-yellow-400 text-hatchiBrown px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors"
+          onClick={handleEmailClick}
+          className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
         >
-          Subscribe
+          <FaEnvelope /> Email Us
         </button>
-      </form>
-
-      {submitted && (
-        <p className="mt-4 text-yellow-400 font-bold">Subscribed successfully!</p>
-      )}
+      </div>
     </section>
   );
 }
