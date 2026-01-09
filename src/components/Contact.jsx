@@ -44,7 +44,7 @@ export default function Contact() {
 
         {/* Facebook */}
         <a
-          href="#" // 🔴 CHANGE THIS TO YOUR PAGE
+          href="https://www.facebook.com/profile.php?id=61586492634967&rdid=IYHRWweycRqCaVE2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JJuVAM3XM#" // 🔴 CHANGE THIS TO YOUR PAGE
           target="_blank"
           rel="noopener noreferrer"
           className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
@@ -63,3 +63,4 @@ export default function Contact() {
     </section>
   );
 }
+
