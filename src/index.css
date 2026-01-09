@@ -5,7 +5,7 @@
 /* Full-page background */
 body {
   @apply bg-cover bg-center bg-fixed;
-  background-image: url('/bg.jpg'); /* your image in public/ */
+  background-image: url('/'); /* your image in public/ */
 }
 
 /* Optional overlay for text readability */
@@ -30,4 +30,22 @@ body {
 
 .animate-fast-pulse {
   animation: fast-pulse .8s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 8px #22c55e; }
+  50% { box-shadow: 0 0 22px #22c55e; }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 8px #ef4444; }
+  50% { box-shadow: 0 0 22px #ef4444; }
+}
+
+.animate-pulse-green {
+  animation: pulse-green 0.7s infinite;
+}
+
+.animate-pulse-red {
+  animation: pulse-red 0.7s infinite;
 }
