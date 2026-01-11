@@ -34,7 +34,7 @@ export default function Contact() {
 
         {/* Twitter / X */}
         <a
-          href="https://x.com/all_Traders25"
+          href="https://x.com/HATCHISOL"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
@@ -63,5 +63,6 @@ export default function Contact() {
     </section>
   );
 }
+
 
 
