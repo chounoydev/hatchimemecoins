@@ -16,7 +16,7 @@ export default function Roadmap() {
       completed: [], // none completed yet
       details: [
         "Boost campaigns on social media",
-        "Pay the people who support and promote $Hatchi",
+        "Reward supporters and promote $Hatchi utilities",
         "Listing on Coin Gecko",
         "Community engagement & giveaways",
       ],
@@ -26,7 +26,7 @@ export default function Roadmap() {
       completed: [], // none completed yet
       details: [
         "Major exchange listings",
-        "Reward supporters and promote $Hatchi utilities",
+        "10k+ Holders",
         "Continuous community support",
         "Develop new features and partnerships",
       ],
@@ -73,4 +73,5 @@ export default function Roadmap() {
     </section>
   );
 }
+
 
