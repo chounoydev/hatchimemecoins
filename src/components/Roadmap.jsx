@@ -9,6 +9,7 @@ export default function Roadmap() {
         "Official website launch",
         "Social media pages creation (Twitter/X, Telegram, Facebook)",
         "Initial community recruitment",
+        "Dex paid",
       ],
     },
     {
@@ -73,5 +74,6 @@ export default function Roadmap() {
     </section>
   );
 }
+
 
 
