@@ -35,7 +35,7 @@ export default function Navbar() {
       {/* Social Icons */}
       <div className="flex space-x-4 md:space-x-0 text-lg">
         <a
-          href="https://x.com/all_Traders25"
+          href="https://x.com/HATCHISOL"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-hatchiGold"
@@ -65,4 +65,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
 
