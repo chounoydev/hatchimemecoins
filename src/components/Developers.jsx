@@ -33,19 +33,19 @@ export default function Developers() {
           Meet the Developers
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {devs.map((dev, index) => (
             <div
               key={index}
-              className="bg-[#2c1e0b]/80 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform"
+              className="bg-[#2c1e0b]/80 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform flex flex-col items-center"
             >
               <img
                 src={dev.image}
                 alt={dev.name}
-                className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
+                className="w-40 h-40 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full mb-4 object-cover border-4 border-yellow-400"
               />
               <h3 className="text-xl font-bold mb-1">{dev.name}</h3>
-              <p className="text-yellow-300">{dev.role}</p>
+              <p className="text-yellow-300 text-center">{dev.role}</p>
             </div>
           ))}
         </div>
