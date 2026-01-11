@@ -21,6 +21,10 @@ export default function Navbar() {
         <a href="#tokenomics" className="hover:text-hatchiGold">
           Tokenomics
         </a>
+        {/* ✅ ROADMAP BUTTON ADDED */}
+        <a href="#roadmap" className="hover:text-hatchiGold">
+          Roadmap
+        </a>
         <a href="#contact" className="hover:text-hatchiGold">
           Contact
         </a>
@@ -53,7 +57,7 @@ export default function Navbar() {
           <FaTelegram />
         </a>
         <a
-          href="https://www.facebook.com/profile.php?id=61586492634967&rdid=IYHRWweycRqCaVE2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JJuVAM3XM#" // 🔴 Replace with your FB page
+          href="https://www.facebook.com/profile.php?id=61586492634967&rdid=IYHRWweycRqCaVE2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JJuVAM3XM#"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-hatchiGold"
@@ -65,5 +69,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
