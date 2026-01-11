@@ -16,7 +16,7 @@ export default function Developers() {
       image: "/rey.jpg",
     },
     {
-      name: "Joel",
+      name: "JOEL",
       role: "Community Manager",
       image: "/joel.png",
     },
