@@ -15,6 +15,11 @@ export default function Developers() {
       role: "Design / Graphics Lead",
       image: "/rey.jpg",
     },
+    {
+      name: "Joel",
+      role: "Community Manager",
+      image: "/joel.png",
+    },
   ];
 
   return (
@@ -45,7 +50,6 @@ export default function Developers() {
           ))}
         </div>
       </section>
-
     </>
   );
 }
