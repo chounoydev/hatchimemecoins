@@ -9,7 +9,6 @@ export default function Roadmap() {
         "Official website launch",
         "Social media pages creation (Twitter/X, Telegram, Facebook)",
         "Initial community recruitment",
-        "Get $HATCHI Trending on Dexscreen",
       ],
     },
     {
@@ -27,7 +26,7 @@ export default function Roadmap() {
       completed: [], // none completed yet
       details: [
         "Major exchange listings",
-        "Roadmap for NFTs and other utilities",
+        "Reward supporters and promote $Hatchi utilities",
         "Continuous community support",
         "Develop new features and partnerships",
       ],
@@ -74,3 +73,4 @@ export default function Roadmap() {
     </section>
   );
 }
+
