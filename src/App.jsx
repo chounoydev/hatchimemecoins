@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhatIsHatchi from "./components/WhatIsHatchi";
 import Tokenomics from "./components/Tokenomics";
+import Roadmap from "./components/Roadmap";
 import Developers from "./components/Developers";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -72,12 +73,30 @@ export default function App() {
           {isMusicOn ? "🔊" : "🔇"}
         </button>
 
+        {/* NAVBAR */}
         <Navbar />
+
+        {/* HERO / INTRO */}
         <Hero />
+
+        {/* ABOUT / WHAT IS HATCHI */}
         <WhatIsHatchi />
-        <Tokenomics />
+
+        {/* TOKENOMICS */}
+        <section id="tokenomics">
+          <Tokenomics />
+        </section>
+
+        {/* ✅ ROADMAP SECTION ADDED BELOW TOKENOMICS */}
+        <Roadmap />
+
+        {/* DEVELOPERS */}
         <Developers />
+
+        {/* CONTACT */}
         <Contact />
+
+        {/* FOOTER */}
         <Footer />
       </div>
     </>
