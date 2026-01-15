@@ -54,13 +54,19 @@ export default function WhatIsHatchi() {
         </div>
 
         <p className="max-w-3xl mx-auto text-lg font-modern mb-12">
-          Hatchi was a real dog, but he passed away on January 6, 2026, just after the New Year. 
-          He suddenly became weak and slowly lost his appetite. Hatchi was a Chow Chow and only two years old,
-          which makes his passing even more heartbreaking. He was one of our most beloved dogs,
-          and losing him has been incredibly hard for us to accept. Because of the pain and love we have for him,
-          we decided to create a new memecoin inspired by our dog Hatchi, who is no longer with us and has gone to heaven.
-          He became our inspiration, and through this project, we want his memory to live on.
-          Hatchi is more than just a dog to us—he is the heart behind what we believe will be the next memecoin to trend.
+          Hatchi was a real dog a fluffy, two-year-old Chow Chow who filled our lives with pure joy,
+           loyalty, and endless love.On January 6, 2026, just days after the New Year, Hatchi suddenly became weak.
+            He slowly lost his appetite, and despite everything we did to help him, he peacefully passed away. 
+            Losing him at such a young age broke our hearts in ways we can barely describe. He was more than a pet 
+             he was family, our constant companion, and the light of our home.The pain of his loss was overwhelming, 
+             but it also reminded us how deeply he had touched our lives. Because of that love and that heartbreak,
+              we decided to create $HATCHI — a memecoin born from real emotion, not just hype.
+              This project is our way of keeping Hatchi's memory alive forever. Through this coin, his spirit of loyalty,
+               joy, and unconditional love continues on — in a community, in a movement, 
+               and hopefully in something that can bring happiness to many others, just like he did for us.
+               Hatchi may have gone to heaven, but he will never truly leave us. He is the heart and soul behind $HATCHI. 
+
+
         </p>
       </div>
 
