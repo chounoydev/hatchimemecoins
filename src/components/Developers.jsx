@@ -1,7 +1,7 @@
 export default function Developers() {
   const devs = [
     {
-      name: "JAN.ETH",
+      name: "CHOUNOY.ETH",
       role: "Lead Developer",
       image: "/jan11.jpg",
     },
@@ -53,3 +53,4 @@ export default function Developers() {
     </>
   );
 }
+
