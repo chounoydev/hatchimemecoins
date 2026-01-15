@@ -17,17 +17,18 @@ export default function Hero() {
       className="h-screen flex flex-col md:flex-row items-center justify-center px-4"
     >
       <div className="md:w-1/2 text-center md:text-left">
-        <h1 className="text-6xl font-playful mb-6 text-yellow-400">Meet $HATCHI</h1>
+        <h1 className="text-6xl font-playful mb-6 text-yellow-400">
+          Meet $HATCHI
+        </h1>
+
         <p className="text-xl md:text-2xl mb-6 font-modern">
-          The cutest dog memecoin with real community vibes. Join us and be part of the pack!
+          The cutest dog memecoin with real community vibes. Join us and be part
+          of the pack!
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <button className="bg-yellow-400 text-hatchiBrown px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors">
-            <a
-              href="#"
-              className="hover:text-hatchiGold"
-            >
+            <a href="#" className="hover:text-hatchiGold">
               BUY $HATCHI
             </a>
           </button>
@@ -44,6 +45,15 @@ export default function Hero() {
               </span>
             )}
           </button>
+
+          {/* Download White Paper Button */}
+          <a
+            href="/whitepaperhatchi.pdf"
+            download
+            className="bg-white text-hatchiBrown px-6 py-3 rounded-full font-bold border-2 border-hatchiBrown hover:bg-hatchiBrown hover:text-white transition-colors"
+          >
+            📄 Download White Paper
+          </a>
         </div>
       </div>
 
@@ -53,4 +63,3 @@ export default function Hero() {
     </section>
   );
 }
-
