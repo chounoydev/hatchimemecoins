@@ -22,8 +22,8 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl mb-6 font-modern">
-          The cutest dog memecoin with real community vibes. Join us and be part
-          of the pack!
+          A community-driven dog memecoin built by the people, for the people. Powered by unity, transparency, 
+          and real community vibes. Join the pack and help shape the future of HATCHI together.
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 items-center">
@@ -52,7 +52,7 @@ export default function Hero() {
             download
             className="bg-white text-hatchiBrown px-6 py-3 rounded-full font-bold border-2 border-hatchiBrown hover:bg-hatchiBrown hover:text-white transition-colors"
           >
-            📄 Download White Paper
+            📄 Download WhitePaper.PDF
           </a>
         </div>
       </div>
