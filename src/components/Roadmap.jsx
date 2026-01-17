@@ -1,79 +1,114 @@
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaRocket, FaChartLine, FaGlobe } from "react-icons/fa";
 
 export default function Roadmap() {
   const phases = [
     {
       phase: "Phase 1",
-      completed: [0, 1, 2, ], // ✅ All items completed
+      title: "Launch Phase",
+      icon: <FaRocket className="text-yellow-400 w-8 h-8 mb-3" />,
+      completed: [0, 1, 2, 3],
       details: [
         "Official website launch",
-        "Social media pages creation (Twitter/X, Telegram, Facebook)",
-        "Initial community recruitment",
-        "Dex paid",
+        "Social media setup (X, Telegram, Facebook)",
+        "Initial community building",
+        "DEX paid & launch preparation",
       ],
     },
     {
       phase: "Phase 2",
-      completed: [], // none completed yet
+      title: "Growth Phase",
+      icon: <FaChartLine className="text-yellow-400 w-8 h-8 mb-3" />,
+      completed: [],
       details: [
-        "Boost campaigns on social media",
-        "Reward supporters and promote $Hatchi utilities",
-        "Listing on Coin Gecko",
-        "Community engagement & giveaways",
+        "Boost campaigns on social platforms",
+        "Community rewards & engagement",
+        "CoinGecko & CoinMarketCap listing",
+        "Giveaways and partnerships",
       ],
     },
     {
       phase: "Phase 3",
-      completed: [], // none completed yet
+      title: "Expansion Phase",
+      icon: <FaGlobe className="text-yellow-400 w-8 h-8 mb-3" />,
+      completed: [],
       details: [
         "Major exchange listings",
-        "10k+ Holders",
-        "Continuous community support",
-        "Develop new features and partnerships",
+        "10,000+ holders milestone",
+        "Ongoing community incentives",
+        "Strategic partnerships & utilities",
       ],
     },
   ];
 
   return (
-    <section id="roadmap" className="py-16 px-4 text-yellow-400">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl mb-12 font-bold">Roadmap</h2>
+    <section id="roadmap" className="relative py-24 px-4 text-center scroll-reveal">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-20">
+          <p className="uppercase tracking-widest text-lg font-playful mb-3 text-yellow-400">
+            Our Journey
+          </p>
+          <h2 className="text-4xl md:text-5xl font-playful mb-4 text-yellow-400">
+            Roadmap
+          </h2>
+          <p className="max-w-xl mx-auto text-base md:text-lg text-[#fff8dc] font-playful">
+            Our path toward building a strong, sustainable, and community-driven memecoin ecosystem.
+          </p>
+        </div>
 
-        <div className="space-y-12">
-          {phases.map((phase, index) => (
-            <div
-              key={index}
-              className="bg-[#3a2610]/80 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform flex items-start space-x-4"
-            >
-              {/* Blinking circle on the left */}
-              <span className="w-4 h-4 mt-2 rounded-full bg-blue-500 animate-pulse flex-shrink-0"></span>
+        {/* Timeline */}
+        <div className="relative">
+          {/* Center Line */}
+          <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-yellow-400/50"></div>
 
-              {/* Phase content */}
-              <div className="text-left w-full">
-                <h3 className="text-2xl font-bold mb-2">{phase.phase}</h3>
-                <h4 className="text-xl mb-4">{phase.title}</h4>
+          <div className="space-y-24">
+            {phases.map((phase, index) => (
+              <div
+                key={index}
+                className={`relative flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                }`}
+              >
+                {/* Phase Number */}
+                <div className="absolute left-1/2 -translate-x-1/2 z-10">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg bg-yellow-400 text-black font-bold text-lg md:text-xl font-playful">
+                    {index + 1}
+                  </div>
+                </div>
 
-                <ul className="list-disc list-inside space-y-2">
-                  {phase.details.map((item, idx) => {
-                    const isCompleted = phase.completed.includes(idx);
-                    return (
-                      <li key={idx} className="flex items-center space-x-2">
-                        {isCompleted && (
-                          <FaCheckCircle className="text-green-500 animate-pulse" />
-                        )}
-                        <span>{item}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {/* Card */}
+                <div
+                  className="rounded-xl p-8 w-full md:w-[45%] bg-[#7B4513]/40 border border-yellow-400 text-[#fff8dc] transition hover:scale-105"
+                >
+                  {/* Phase Icon */}
+                  <div className="flex justify-center md:justify-start">{phase.icon}</div>
+
+                  {/* Phase Label */}
+                  <p className="text-lg md:text-xl mb-1 text-yellow-400 font-playful font-semibold">{phase.phase}</p>
+                  <h3 className="text-2xl md:text-3xl font-playful font-bold mb-4">{phase.title}</h3>
+
+                  {/* Phase Details */}
+                  <ul className="space-y-3 text-base md:text-lg font-playful">
+                    {phase.details.map((item, idx) => {
+                      const isCompleted = phase.completed.includes(idx);
+                      return (
+                        <li key={idx} className="flex items-start gap-3">
+                          {isCompleted ? (
+                            <FaCheckCircle className="mt-1 text-green-500 animate-blink" />
+                          ) : (
+                            <span className="w-3 h-3 mt-2 rounded-full border border-white/60"></span>
+                          )}
+                          <span>{item}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
-
-
