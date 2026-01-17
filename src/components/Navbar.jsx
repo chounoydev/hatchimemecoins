@@ -16,7 +16,7 @@ export default function Navbar() {
           Home
         </a>
         <a href="#whatishatchi" className="hover:text-hatchiGold">
-          About
+          Story of Hatchi
         </a>
         <a href="#tokenomics" className="hover:text-hatchiGold">
           Tokenomics
