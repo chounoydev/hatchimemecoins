@@ -18,14 +18,14 @@ export default function Footer() {
             </div>
 
             <h3 className="text-white text-lg font-semibold">
-              Hatchisol
+             $HATCHI
             </h3>
           </div>
 
           {/* HATCHI IMAGE ADDED */}
           <div className="mb-5">
             <img
-              src="hatchi2.png"
+              src=""
               alt="Hatchi Mascot"
               className="w-32 h-auto rounded-xl"
             />
@@ -118,4 +118,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 
