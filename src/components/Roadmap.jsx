@@ -2,7 +2,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="py-24">
+    <section id="roadmap" className="py-28 bg-white">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Header */}
@@ -10,22 +10,22 @@ export default function Roadmap() {
           <p className="text-sm uppercase tracking-widest text-orange-500">
             Our Journey
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3 text-orange-500">
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900">
             Roadmap
           </h2>
-          <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+          <p className="text-gray-500 mt-4 max-w-xl mx-auto text-lg">
             Our path to becoming the most powerful meme coin community.
           </p>
         </div>
 
-        {/* Timeline Wrapper */}
-        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-y-28">
+        {/* Timeline */}
+        <div className="relative">
 
           {/* Center Vertical Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-300 -translate-x-1/2" />
+          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-orange-200 -translate-x-1/2" />
 
-          {/* ========== PHASE 1 (LEFT) ========== */}
-          <div className="md:col-start-1">
+          {/* PHASE 1 */}
+          <TimelineItem number="1" side="left">
             <RoadmapCard
               phase="Phase 1"
               title="Launch Phase"
@@ -36,15 +36,10 @@ export default function Roadmap() {
                 "Community building",
               ]}
             />
-          </div>
+          </TimelineItem>
 
-          <TimelineDot number="1" />
-          <div className="hidden md:block" />
-
-          {/* ========== PHASE 2 (RIGHT) ========== */}
-          <div className="hidden md:block" />
-          <TimelineDot number="2" />
-          <div className="md:col-start-3">
+          {/* PHASE 2 */}
+          <TimelineItem number="2" side="right">
             <RoadmapCard
               phase="Phase 2"
               title="Growth Phase"
@@ -54,10 +49,10 @@ export default function Roadmap() {
                 "10,000+ holders",
               ]}
             />
-          </div>
+          </TimelineItem>
 
-          {/* ========== PHASE 3 (LEFT) ========== */}
-          <div className="md:col-start-1">
+          {/* PHASE 3 */}
+          <TimelineItem number="3" side="left">
             <RoadmapCard
               phase="Phase 3"
               title="Expansion Phase"
@@ -68,15 +63,10 @@ export default function Roadmap() {
                 "Strategic partnerships",
               ]}
             />
-          </div>
+          </TimelineItem>
 
-          <TimelineDot number="3" />
-          <div className="hidden md:block" />
-
-          {/* ========== PHASE 4 (RIGHT) ========== */}
-          <div className="hidden md:block" />
-          <TimelineDot number="4" />
-          <div className="md:col-start-3">
+          {/* PHASE 4 */}
+          <TimelineItem number="4" side="right">
             <RoadmapCard
               phase="Phase 4"
               title="Future Vision"
@@ -85,7 +75,8 @@ export default function Roadmap() {
                 "Your voice matters",
               ]}
             />
-          </div>
+          </TimelineItem>
+
         </div>
       </div>
     </section>
@@ -93,14 +84,33 @@ export default function Roadmap() {
 }
 
 /* ===============================
-   Timeline Dot
+   Timeline Item
 ================================= */
-function TimelineDot({ number }) {
+function TimelineItem({ number, side, children }) {
   return (
-    <div className="flex justify-center relative z-10">
-      <div className="w-11 h-11 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold shadow-md">
-        {number}
+    <div className="relative grid grid-cols-1 md:grid-cols-2 items-start mb-28">
+
+      {/* Left side */}
+      {side === "left" && (
+        <div className="md:pr-16">
+          {children}
+        </div>
+      )}
+
+      {/* Right side */}
+      {side === "right" && (
+        <div className="md:col-start-2 md:pl-16">
+          {children}
+        </div>
+      )}
+
+      {/* Timeline Dot */}
+      <div className="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 z-10">
+        <div className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+          {number}
+        </div>
       </div>
+
     </div>
   );
 }
@@ -110,34 +120,31 @@ function TimelineDot({ number }) {
 ================================= */
 function RoadmapCard({ phase, title, items }) {
   return (
-    <div
-      className="
-        rounded-xl p-6 md:p-7
-        border border-orange-400/30
-        bg-orange-900/20
-        backdrop-blur-sm
-      "
-    >
-      {/* Phase label */}
-      <p className="text-sm text-orange-400 mb-2 flex items-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-orange-400"></span>
+    <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+
+      {/* Phase */}
+      <p className="text-sm font-semibold text-orange-500 mb-2">
         {phase}
       </p>
 
       {/* Title */}
-      <h3 className="text-xl font-semibold mb-4 text-white">
+      <h3 className="text-2xl font-bold text-gray-900 mb-6">
         {title}
       </h3>
 
-      {/* List */}
-      <ul className="space-y-3">
+      {/* Items */}
+      <ul className="space-y-4">
         {items.map((item, index) => (
-          <li key={index} className="flex items-start gap-3 text-white">
-            <CheckCircle className="w-5 h-5 text-green-400 animate-blink" />
+          <li
+            key={index}
+            className="flex items-start gap-3 text-gray-700 text-lg"
+          >
+            <CheckCircle className="w-6 h-6 text-green-500 mt-1" />
             <span>{item}</span>
           </li>
         ))}
       </ul>
+
     </div>
   );
 }
