@@ -48,11 +48,11 @@ export default function Hero() {
 
           {/* Download White Paper Button */}
           <a
-            href="/whitepaperhatchi.pdf"
+            href="/whitepaper2026.pdf"
             download
             className="bg-white text-hatchiBrown px-6 py-3 rounded-full font-bold border-2 border-hatchiBrown hover:bg-hatchiBrown hover:text-white transition-colors"
           >
-            📄 Download WhitePaper.PDF
+            📄 Download WhitePaper.pdf
           </a>
         </div>
       </div>
@@ -63,3 +63,4 @@ export default function Hero() {
     </section>
   );
 }
+
