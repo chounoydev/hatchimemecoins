@@ -25,7 +25,7 @@ export default function Footer() {
           {/* HATCHI IMAGE ADDED */}
           <div className="mb-5">
             <img
-              src=""
+              src="hatchi2.png"
               alt="Hatchi Mascot"
               className="w-32 h-auto rounded-xl"
             />
@@ -118,5 +118,6 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
