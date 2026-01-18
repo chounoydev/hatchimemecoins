@@ -10,7 +10,7 @@ export default function WhatIsHatchi() {
     const fetchPrice = async () => {
       try {
         const res = await fetch(
-          "https://api.dexscreener.com/latest/dex/pairs/solana/2yf38DKf3j2NKkaYpokNKv7tGmX5G2gedjJvWKVLkFYx"
+          "https://api.dexscreener.com/latest/dex/pairs/solana/2y8qhdp4zox3mtkijnpcqifqunchde69lkzntyvfjeqg"
         );
         const data = await res.json();
         if (!data.pairs || !data.pairs.length) return;
@@ -141,7 +141,7 @@ export default function WhatIsHatchi() {
 
           <iframe
             title="$HATCHI Live Price"
-            src="https://dexscreener.com/solana/2yf38dkf3j2nkkaypoknkv7tgmx5g2gedjjvwkvlkfyx"
+            src="https://dexscreener.com/solana/2y8qhdp4zox3mtkijnpcqifqunchde69lkzntyvfjeqg"
             style={{ width: "100%", height: "420px", border: "none" }}
             scrolling="no"
           ></iframe>
@@ -150,3 +150,4 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
+
