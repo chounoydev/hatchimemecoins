@@ -3,25 +3,59 @@
 @tailwind utilities;
 
 /* -------------------------- */
+/* Global layout fixes */
+/* -------------------------- */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; /* FIX: prevents timeline overflow */
+}
+
+/* -------------------------- */
 /* Full-page background setup */
 /* -------------------------- */
 body {
   @apply bg-cover bg-center bg-fixed;
-  /* Make sure to provide an actual image path in public/ */
   background-image: url('/your-background-image.jpg');
 }
 
 /* Optional overlay for readability */
 .section-overlay {
-  @apply bg-black/30; /* semi-transparent black overlay */
+  @apply bg-black/30;
+}
+
+/* -------------------------- */
+/* Roadmap specific fixes */
+/* -------------------------- */
+
+/* Ensure timeline line stays centered */
+.roadmap-timeline {
+  position: relative;
+}
+
+/* Prevent cards from collapsing or overlapping */
+.roadmap-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Fix alignment on small screens */
+@media (max-width: 768px) {
+  .roadmap-timeline::before {
+    display: none;
+  }
 }
 
 /* -------------------------- */
 /* Sliding banner animation */
 /* -------------------------- */
 @keyframes slide-left {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .slide-banner {
@@ -32,8 +66,13 @@ body {
 /* Fast blinking animation */
 /* -------------------------- */
 @keyframes fast-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
 }
 
 .animate-fast-pulse {
@@ -44,13 +83,23 @@ body {
 /* Pulse animations (green/red) */
 /* -------------------------- */
 @keyframes pulse-green {
-  0%, 100% { box-shadow: 0 0 8px #22c55e; }
-  50% { box-shadow: 0 0 22px #22c55e; }
+  0%,
+  100% {
+    box-shadow: 0 0 8px #22c55e;
+  }
+  50% {
+    box-shadow: 0 0 22px #22c55e;
+  }
 }
 
 @keyframes pulse-red {
-  0%, 100% { box-shadow: 0 0 8px #ef4444; }
-  50% { box-shadow: 0 0 22px #ef4444; }
+  0%,
+  100% {
+    box-shadow: 0 0 8px #ef4444;
+  }
+  50% {
+    box-shadow: 0 0 22px #ef4444;
+  }
 }
 
 .animate-pulse-green {
@@ -65,8 +114,13 @@ body {
 /* Blinking animation for roadmap checkmarks */
 /* -------------------------- */
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
 }
 
 .animate-blink {
