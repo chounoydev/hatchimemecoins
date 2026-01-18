@@ -2,18 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Full-page background */
+/* -------------------------- */
+/* Full-page background setup */
+/* -------------------------- */
 body {
   @apply bg-cover bg-center bg-fixed;
-  background-image: url('/'); /* your image in public/ */
+  /* Make sure to provide an actual image path in public/ */
+  background-image: url('/your-background-image.jpg');
 }
 
-/* Optional overlay for text readability */
+/* Optional overlay for readability */
 .section-overlay {
   @apply bg-black/30; /* semi-transparent black overlay */
 }
 
+/* -------------------------- */
 /* Sliding banner animation */
+/* -------------------------- */
 @keyframes slide-left {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
@@ -23,15 +28,21 @@ body {
   animation: slide-left 15s linear infinite;
 }
 
+/* -------------------------- */
+/* Fast blinking animation */
+/* -------------------------- */
 @keyframes fast-pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.2; }
 }
 
 .animate-fast-pulse {
-  animation: fast-pulse .8s infinite;
+  animation: fast-pulse 0.8s infinite;
 }
 
+/* -------------------------- */
+/* Pulse animations (green/red) */
+/* -------------------------- */
 @keyframes pulse-green {
   0%, 100% { box-shadow: 0 0 8px #22c55e; }
   50% { box-shadow: 0 0 22px #22c55e; }
@@ -50,7 +61,9 @@ body {
   animation: pulse-red 0.7s infinite;
 }
 
-/* New: Blinking animation for roadmap checkmarks */
+/* -------------------------- */
+/* Blinking animation for roadmap checkmarks */
+/* -------------------------- */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.2; }
