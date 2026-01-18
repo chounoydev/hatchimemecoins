@@ -8,12 +8,27 @@ export default function Footer() {
         {/* Brand Section */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center">
-              <span className="text-black font-bold">H</span>
+            {/* LOGO IMAGE ADDED */}
+            <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center overflow-hidden">
+              <img
+                src="/images/hatchisol-logo.png"
+                alt="Hatchisol Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
+
             <h3 className="text-white text-lg font-semibold">
-              Hatchi
+              Hatchisol
             </h3>
+          </div>
+
+          {/* HATCHI IMAGE ADDED */}
+          <div className="mb-5">
+            <img
+              src="hatchi2.png"
+              alt="Hatchi Mascot"
+              className="w-32 h-auto rounded-xl"
+            />
           </div>
 
           <p className="text-sm max-w-sm leading-relaxed">
@@ -103,7 +118,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-
-
