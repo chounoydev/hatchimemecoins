@@ -12,11 +12,9 @@ export default function Roadmap() {
           <p className="text-sm uppercase tracking-widest text-orange-500">
             Our Journey
           </p>
-
           <h2 className="text-4xl md:text-5xl font-bold mt-3 text-orange-500">
             Roadmap
           </h2>
-
           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-lg">
             Our path to becoming the most powerful meme coin community.
           </p>
@@ -28,8 +26,8 @@ export default function Roadmap() {
           {/* Center Line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-orange-400/30 -translate-x-1/2" />
 
-          {/* PHASE 1 */}
-          <TimelineItem number="1" align="left">
+          {/* Phase 1 */}
+          <TimelineRow number="1" side="left">
             <RoadmapCard
               phase="Phase 1"
               title="Launch Phase"
@@ -40,10 +38,10 @@ export default function Roadmap() {
                 "Community building",
               ]}
             />
-          </TimelineItem>
+          </TimelineRow>
 
-          {/* PHASE 2 */}
-          <TimelineItem number="2" align="right">
+          {/* Phase 2 */}
+          <TimelineRow number="2" side="right">
             <RoadmapCard
               phase="Phase 2"
               title="Growth Phase"
@@ -53,10 +51,10 @@ export default function Roadmap() {
                 "10,000+ holders",
               ]}
             />
-          </TimelineItem>
+          </TimelineRow>
 
-          {/* PHASE 3 */}
-          <TimelineItem number="3" align="left">
+          {/* Phase 3 */}
+          <TimelineRow number="3" side="left">
             <RoadmapCard
               phase="Phase 3"
               title="Expansion Phase"
@@ -67,10 +65,10 @@ export default function Roadmap() {
                 "Strategic partnerships",
               ]}
             />
-          </TimelineItem>
+          </TimelineRow>
 
-          {/* PHASE 4 */}
-          <TimelineItem number="4" align="right">
+          {/* Phase 4 */}
+          <TimelineRow number="4" side="right">
             <RoadmapCard
               phase="Phase 4"
               title="Future Vision"
@@ -79,7 +77,7 @@ export default function Roadmap() {
                 "Your voice matters",
               ]}
             />
-          </TimelineItem>
+          </TimelineRow>
 
         </div>
       </div>
@@ -88,29 +86,27 @@ export default function Roadmap() {
 }
 
 /* ===============================
-   Timeline Item
+   Timeline Row (KEY FIX)
 ================================= */
-function TimelineItem({ number, align, children }) {
+function TimelineRow({ number, side, children }) {
   return (
-    <div className="relative grid grid-cols-1 md:grid-cols-2 mb-28">
+    <div className="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center mb-28">
 
-      {align === "left" && (
-        <div className="md:pr-16">
-          {children}
-        </div>
-      )}
+      {/* Left Card */}
+      <div className={`${side === "left" ? "md:pr-16" : ""}`}>
+        {side === "left" && children}
+      </div>
 
-      {align === "right" && (
-        <div className="md:col-start-2 md:pl-16">
-          {children}
-        </div>
-      )}
-
-      {/* Dot */}
-      <div className="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 z-10">
+      {/* Center Dot */}
+      <div className="hidden md:flex justify-center">
         <div className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg shadow-md">
           {number}
         </div>
+      </div>
+
+      {/* Right Card */}
+      <div className={`${side === "right" ? "md:pl-16" : ""}`}>
+        {side === "right" && children}
       </div>
 
     </div>
@@ -138,7 +134,7 @@ function RoadmapCard({ phase, title, items }) {
             key={index}
             className="flex items-start gap-3 text-white text-lg"
           >
-            <CheckCircle className="w-6 h-6 text-green-400 mt-1" />
+            <CheckCircle className="w-6 h-6 text-green-400 mt-1 animate-blink" />
             <span>{item}</span>
           </li>
         ))}
