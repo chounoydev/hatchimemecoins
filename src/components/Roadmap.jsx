@@ -7,13 +7,13 @@ export default function Roadmap() {
 
         {/* Header */}
         <div className="text-center mb-20">
-          <p className="text-sm uppercase tracking-widest text-orange-500">
+          <p className="text-sm uppercase tracking-widest text-yellow-400">
             Our Journey
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3 text-orange-500">
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 text-white">
             Roadmap
           </h2>
-          <p className="text-gray-400 mt-4 max-w-xl mx-auto text-lg">
+          <p className="text-gray-200 mt-4 max-w-xl mx-auto text-lg">
             Our path to becoming the most powerful meme coin community.
           </p>
         </div>
@@ -118,6 +118,7 @@ function Dot({ number }) {
 function Card({ phase, title, items }) {
   return (
     <div className="rounded-xl p-7 border border-orange-400/30 bg-orange-900/20 backdrop-blur-sm">
+
       <p className="text-sm text-orange-400 mb-2 font-semibold">
         {phase}
       </p>
@@ -128,9 +129,19 @@ function Card({ phase, title, items }) {
 
       <ul className="space-y-3 text-white text-lg">
         {items.map((item, index) => (
-          <li key={index}>✔ {item}</li>
+          <li
+            key={index}
+            className="flex items-center gap-2"
+          >
+            {/* Blinking check */}
+            <span className="inline-block w-5 h-5 text-yellow-400 font-bold animate-blink">
+              ✔
+            </span>
+            <span>{item}</span>
+          </li>
         ))}
       </ul>
+
     </div>
   );
 }
