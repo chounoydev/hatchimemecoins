@@ -51,19 +51,33 @@ export default function WhatIsHatchi() {
               The Story of Hatchi
             </h2>
 
+            {/* ✅ UPDATED STORY (COMMUNITY-DRIVEN) */}
             <p className="text-lg text-white/85 leading-relaxed">
               Hatchi was a real dog — a fluffy, two-year-old Chow Chow who filled
-              our lives with pure joy, loyalty, and endless love. On January 6,
-              2026, just days after the New Year, Hatchi suddenly became weak.
+              our lives with loyalty, warmth, and unconditional love. He wasn’t
+              just a pet — he was family, a constant companion, and a source of
+              joy every single day.
               <br /><br />
-              He slowly lost his appetite, and despite everything we did to help
-              him, he peacefully passed away. Losing him at such a young age
-              broke our hearts. He wasn’t just a pet — he was family.
+              On January 6, 2026, just days after the New Year, Hatchi suddenly
+              became weak. He lost his appetite, and despite every effort to
+              help him, he peacefully passed away. Losing him so young left a
+              deep emptiness in our hearts — but also a reminder of how powerful
+              real bonds can be.
               <br /><br />
-              From that love and heartbreak,{" "}
+              From that love and loss,{" "}
               <span className="text-[#d4af37] font-bold">$HATCHI</span>{" "}
-              was born. A memecoin created to keep his spirit alive — loyalty,
-              joy, and unconditional love living forever through community.
+              was born — not as just another memecoin, but as a
+              <b> community-driven project</b> built on shared values, real
+              emotion, and collective belief.
+              <br /><br />
+              $HATCHI is powered by its community. Every holder is part of the
+              journey, every voice matters, and every contribution helps shape
+              the future of the project. This is not about short-term hype, but
+              about growing together with loyalty, transparency, and purpose.
+              <br /><br />
+              Hatchi’s spirit lives on through a united community that holds
+              with conviction, supports one another, and believes in something
+              bigger than themselves.
             </p>
           </div>
 
@@ -105,23 +119,20 @@ export default function WhatIsHatchi() {
       {/* SLIDING BANNER – SMOOTH, FAST, NO END */}
       <div className="w-full h-12 bg-[#d4af37] overflow-hidden flex items-center mt-24">
         <div className="flex whitespace-nowrap font-bold text-black animate-slide text-lg">
-          {/* SET 1 */}
-          <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
-          <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
+          <span className="mx-10">🐶 $HATCHI ARYMY</span>
+          <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
           <span className="mx-10">💰 BUY MORE $HATCHI</span>
           <span className="mx-10">📈 TRENDING MEMECOIN</span>
           <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
 
-          {/* SET 2 */}
-          <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
-          <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
+          <span className="mx-10">🐶 $HATCHI ARYMY</span>
+          <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
           <span className="mx-10">💰 BUY MORE $HATCHI</span>
           <span className="mx-10">📈 TRENDING MEMECOIN</span>
           <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
 
-          {/* SET 3 (extra smoothness, no visible loop) */}
-          <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
-          <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
+          <span className="mx-10">🐶 $HATCHI ARYMY</span>
+          <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
           <span className="mx-10">💰 BUY MORE $HATCHI</span>
           <span className="mx-10">📈 TRENDING MEMECOIN</span>
           <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
