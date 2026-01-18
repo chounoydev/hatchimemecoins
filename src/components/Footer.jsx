@@ -7,9 +7,10 @@ export default function Footer() {
 
         {/* Brand Section */}
         <div>
-          <div className="flex items-center gap-4 mb-5">
-            {/* SINGLE IMAGE ONLY */}
-            <div className="w-14 h-14 rounded-xl bg-white flex items-center justify-center overflow-hidden">
+          {/* Logo + Name */}
+          <div className="flex items-center gap-4 mb-4">
+            {/* TRANSPARENT LOGO */}
+            <div className="w-16 h-16 flex items-center justify-center">
               <img
                 src="hatchi2.png"
                 alt="Hatchi Logo"
@@ -17,13 +18,21 @@ export default function Footer() {
               />
             </div>
 
-            {/* NAME ON RIGHT SIDE */}
             <h3 className="text-white text-xl font-semibold">
               $HATCHI
             </h3>
           </div>
 
-          <p className="text-sm max-w-sm leading-relaxed">
+          {/* BIG HATCHI IMAGE */}
+          <div className="mt-6">
+            <img
+              src="hatchi2.png"
+              alt="Hatchi Mascot"
+              className="w-56 md:w-64 lg:w-72 h-auto"
+            />
+          </div>
+
+          <p className="text-sm max-w-sm leading-relaxed mt-5">
             The next generation of meme coins.
             <br />
             Built by the community, for the community.
@@ -44,7 +53,7 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* X (Twitter) */}
+            {/* X */}
             <a
               href="https://x.com/HATCHISOL"
               target="_blank"
