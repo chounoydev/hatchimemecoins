@@ -43,15 +43,15 @@ export default function WhatIsHatchi() {
           
           {/* LEFT TEXT */}
           <div>
-            <span className="text-[#b08957] font-bold tracking-widest">
+            <span className="text-white/80 font-bold tracking-widest">
               ABOUT US
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-playful mt-4 mb-6 text-[#3b2a1a]">
+            <h2 className="text-4xl md:text-5xl font-playful mt-4 mb-6 text-white/90">
               The Story of Hatchi
             </h2>
 
-            <p className="text-lg text-[#4b3827] leading-relaxed">
+            <p className="text-lg text-white/85 leading-relaxed">
               Hatchi was a real dog — a fluffy, two-year-old Chow Chow who filled
               our lives with pure joy, loyalty, and endless love. On January 6,
               2026, just days after the New Year, Hatchi suddenly became weak.
@@ -71,7 +71,8 @@ export default function WhatIsHatchi() {
           <div className="flex justify-center">
             <div
               className="
-                bg-white/90 backdrop-blur rounded-3xl shadow-2xl p-8 text-center w-80
+                bg-[#f5ede3]/70 backdrop-blur
+                rounded-3xl shadow-2xl p-8 text-center w-80
                 transition-all duration-500 ease-out
                 hover:-translate-y-4 hover:rotate-1 hover:scale-105
                 active:scale-110 active:-translate-y-6
@@ -84,11 +85,15 @@ export default function WhatIsHatchi() {
                 className="w-40 h-40 mx-auto rounded-full object-cover mb-6 transition-transform duration-500 hover:scale-110"
               />
 
-              <h3 className="text-2xl font-bold text-[#2b1d12]">
-                <span className="text-[#d4af37]">$HATCHI</span>
+              <h3 className="text-2xl font-bold text-[#4b3827]">
+                Hatchi
               </h3>
 
-              <p className="text-[#b08957] font-semibold mt-2">
+              <h4 className="text-xl font-bold text-[#6b4a2f] mt-1">
+                $HATCHI
+              </h4>
+
+              <p className="text-[#7a5a3a] font-semibold mt-2">
                 Loyalty • Love • Legacy
               </p>
             </div>
@@ -112,7 +117,7 @@ export default function WhatIsHatchi() {
       <div className="px-4 mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-4xl font-playful text-[#3b2a1a] flex items-center gap-4">
+            <h2 className="text-4xl font-playful text-white flex items-center gap-4">
               $HATCHI LIVE CHART
               <span className="w-4 h-4 bg-green-500 rounded-full animate-fast-pulse"></span>
             </h2>
