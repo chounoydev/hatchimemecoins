@@ -32,71 +32,85 @@ export default function WhatIsHatchi() {
     };
 
     fetchPrice();
-    const interval = setInterval(fetchPrice, 1000); // every 5 seconds
+    const interval = setInterval(fetchPrice, 1000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section id="whatishatchi" className="py-16 text-center">
-      <div className="px-4">
-        {/* Story */}
-        <h2 className="text-4xl font-playful mb-8 text-yellow-400">
-          THE STORY OF HATCHI
-        </h2>
+    <section id="whatishatchi" className="py-20">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* STORY GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          {/* LEFT TEXT */}
+          <div>
+            <span className="text-yellow-400 font-bold tracking-widest">
+              ABOUT US
+            </span>
 
-        {/* Bigger description image */}
-        <div className="flex justify-center mb-8">
-          <img
-            src="/hatchi11.png"
-            alt="Hatchi the Chow Chow"
-            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg opacity-95"
-          />
+            <h2 className="text-4xl md:text-5xl font-playful mt-4 mb-6 text-white">
+              The Story of Hatchi
+            </h2>
+
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Hatchi was a real dog — a fluffy, two-year-old Chow Chow who filled
+              our lives with pure joy, loyalty, and endless love. On January 6,
+              2026, just days after the New Year, Hatchi suddenly became weak. He
+              slowly lost his appetite, and despite everything we did to help
+              him, he peacefully passed away.
+              <br /><br />
+              Losing him at such a young age broke our hearts in ways we can
+              barely describe. He was more than a pet — he was family, our
+              constant companion, and the light of our home.
+              <br /><br />
+              Because of that love and heartbreak, we created <b>$HATCHI</b> — a
+              memecoin born from real emotion, not hype. This project keeps
+              Hatchi’s memory alive forever. His loyalty, joy, and unconditional
+              love now live on through a community and a movement.
+            </p>
+          </div>
+
+          {/* RIGHT CARD */}
+          <div className="flex justify-center">
+            <div className="bg-white rounded-3xl shadow-xl p-8 text-center w-80">
+              <img
+                src="/hatchi11.png"
+                alt="Hatchi the Chow Chow"
+                className="w-40 h-40 mx-auto rounded-full object-cover mb-6"
+              />
+              <h3 className="text-2xl font-bold text-black">$HATCHI</h3>
+              <p className="text-yellow-500 font-semibold mt-2">
+                Loyalty • Love • Legacy
+              </p>
+            </div>
+          </div>
+
         </div>
-
-        <p className="max-w-3xl mx-auto text-lg font-modern mb-12">
-          Hatchi was a real dog a fluffy, two-year-old Chow Chow who filled our lives with pure joy,
-           loyalty, and endless love.On January 6, 2026, just days after the New Year, Hatchi suddenly became weak.
-            He slowly lost his appetite, and despite everything we did to help him, he peacefully passed away. 
-            Losing him at such a young age broke our hearts in ways we can barely describe. He was more than a pet 
-             he was family, our constant companion, and the light of our home.The pain of his loss was overwhelming, 
-             but it also reminded us how deeply he had touched our lives. Because of that love and that heartbreak,
-              we decided to create $HATCHI — a memecoin born from real emotion, not just hype.
-              This project is our way of keeping Hatchi's memory alive forever. Through this coin, his spirit of loyalty,
-               joy, and unconditional love continues on — in a community, in a movement, 
-               and hopefully in something that can bring happiness to many others, just like he did for us.
-               Hatchi may have gone to heaven, but he will never truly leave us. He is the heart and soul behind $HATCHI. 
-
-
-        </p>
       </div>
 
-      {/* FULL WIDTH Sliding Banner */}
-      <div className="w-full h-12 bg-yellow-400 overflow-hidden flex items-center">
-  <div className="flex whitespace-nowrap font-bold text-black animate-slide text-lg">
-    <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
-    <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
-    <span className="mx-10">💰 BUY MORE $HATCHI</span>
-    <span className="mx-10">📈 THE NEXT TRENDING MEMECOIN ON PUMPFUN</span>
-    <span className="mx-10">💲 DEX PAID</span>
-    <span className="mx-10">💊 LAUNCH ON PUMPFUN</span>
-    <span className="mx-10">🤝 HODL $HATCHI</span>
-  </div>
-</div>
+      {/* SLIDING BANNER */}
+      <div className="w-full h-12 bg-yellow-400 overflow-hidden flex items-center mt-20">
+        <div className="flex whitespace-nowrap font-bold text-black animate-slide text-lg">
+          <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
+          <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
+          <span className="mx-10">💰 BUY MORE $HATCHI</span>
+          <span className="mx-10">📈 TRENDING MEMECOIN</span>
+          <span className="mx-10">💲 DEX PAID</span>
+          <span className="mx-10">🚀 LAUNCH ON PUMPFUN</span>
+          <span className="mx-10">🤝 HODL $HATCHI</span>
+        </div>
+      </div>
 
-      <br />
+      {/* LIVE CHART */}
+      <div className="px-4 mt-20">
+        <div className="max-w-5xl mx-auto">
 
-      {/* DexScreener Live Price Widget */}
-      <div className="px-4">
-        <div className="max-w-3xl mx-auto mb-8">
-
-          {/* ========== LIVE CHART TITLE + LIVE PRICE BOX ========== */}
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-4xl font-playful mb-8 text-yellow-400 flex items-center gap-4">
+            <h2 className="text-4xl font-playful text-yellow-400 flex items-center gap-4">
               $HATCHI LIVE CHART
               <span className="w-4 h-4 bg-green-500 rounded-full animate-fast-pulse"></span>
             </h2>
 
-            {/* LIVE PRICE */}
             <div
               className={`
                 px-5 py-2 rounded-lg font-bold text-lg
@@ -114,12 +128,10 @@ export default function WhatIsHatchi() {
             </div>
           </div>
 
-          {/* LIVE CHART IFRAME */}
           <iframe
             title="$HATCHI Live Price"
             src="https://dexscreener.com/solana/2yf38dkf3j2nkkaypoknkv7tgmx5g2gedjjvwkvlkfyx"
             style={{ width: "100%", height: "420px", border: "none" }}
-            allowTransparency="true"
             scrolling="no"
           ></iframe>
         </div>
