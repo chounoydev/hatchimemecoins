@@ -26,7 +26,7 @@ export default function WhatIsHatchi() {
         lastPriceRef.current = newPrice;
         setPrice(newPrice);
       } catch (err) {
-        console.error(err);
+        console.error("DexScreener fetch error:", err);
       }
     };
 
@@ -36,20 +36,14 @@ export default function WhatIsHatchi() {
   }, []);
 
   return (
-    <section
-      id="whatishatchi"
-      className="py-24 relative overflow-hidden"
-    >
-      {/* LIGHT BROWN BACKGROUND */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#f3e6d8] via-[#ecd3b8] to-[#f7efe6] opacity-90"></div>
-
-      <div className="relative max-w-7xl mx-auto px-6">
+    <section id="whatishatchi" className="py-24 relative">
+      <div className="max-w-7xl mx-auto px-6">
         {/* STORY GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           
           {/* LEFT TEXT */}
           <div>
-            <span className="text-[#a66a2c] font-bold tracking-widest">
+            <span className="text-[#b08957] font-bold tracking-widest">
               ABOUT US
             </span>
 
@@ -66,9 +60,10 @@ export default function WhatIsHatchi() {
               him, he peacefully passed away. Losing him at such a young age
               broke our hearts. He wasn’t just a pet — he was family.
               <br /><br />
-              From that love and heartbreak, <b>$HATCHI</b> was born. A memecoin
-              created to keep his spirit alive — loyalty, joy, and unconditional
-              love living forever through community.
+              From that love and heartbreak,{" "}
+              <span className="text-[#d4af37] font-bold">$HATCHI</span>{" "}
+              was born. A memecoin created to keep his spirit alive — loyalty,
+              joy, and unconditional love living forever through community.
             </p>
           </div>
 
@@ -76,7 +71,7 @@ export default function WhatIsHatchi() {
           <div className="flex justify-center">
             <div
               className="
-                bg-white rounded-3xl shadow-2xl p-8 text-center w-80
+                bg-white/90 backdrop-blur rounded-3xl shadow-2xl p-8 text-center w-80
                 transition-all duration-500 ease-out
                 hover:-translate-y-4 hover:rotate-1 hover:scale-105
                 active:scale-110 active:-translate-y-6
@@ -89,17 +84,21 @@ export default function WhatIsHatchi() {
                 className="w-40 h-40 mx-auto rounded-full object-cover mb-6 transition-transform duration-500 hover:scale-110"
               />
 
-              <h3 className="text-2xl font-bold text-[#2b1d12]">$HATCHI</h3>
-              <p className="text-[#c0893d] font-semibold mt-2">
+              <h3 className="text-2xl font-bold text-[#2b1d12]">
+                <span className="text-[#d4af37]">$HATCHI</span>
+              </h3>
+
+              <p className="text-[#b08957] font-semibold mt-2">
                 Loyalty • Love • Legacy
               </p>
             </div>
           </div>
+
         </div>
       </div>
 
       {/* SLIDING BANNER */}
-      <div className="relative w-full h-12 bg-[#c0893d] overflow-hidden flex items-center mt-24">
+      <div className="w-full h-12 bg-[#d4af37] overflow-hidden flex items-center mt-24">
         <div className="flex whitespace-nowrap font-bold text-black animate-slide text-lg">
           <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
           <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
@@ -110,7 +109,7 @@ export default function WhatIsHatchi() {
       </div>
 
       {/* LIVE CHART */}
-      <div className="relative px-4 mt-20">
+      <div className="px-4 mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-4xl font-playful text-[#3b2a1a] flex items-center gap-4">
