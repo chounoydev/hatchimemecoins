@@ -7,7 +7,7 @@ export default function Footer() {
 
         {/* Brand Section */}
         <div>
-          {/* Logo + Name (ONE IMAGE ONLY) */}
+          {/* LOGO + NAME (ONLY ONE IMAGE) */}
           <div className="flex items-center gap-3 mb-4">
             <img
               src="/hatchi2.png"
@@ -28,6 +28,7 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6">
+            {/* Telegram */}
             <a
               href="https://t.me/+DjRyRpeurCQ4ZDhl"
               target="_blank"
@@ -40,6 +41,7 @@ export default function Footer() {
               </svg>
             </a>
 
+            {/* X (Twitter) */}
             <a
               href="https://x.com/HATCHISOL"
               target="_blank"
@@ -52,6 +54,7 @@ export default function Footer() {
               </svg>
             </a>
 
+            {/* Email */}
             <a
               href="mailto:hatchidev@gmail.com"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
