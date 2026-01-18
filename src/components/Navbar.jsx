@@ -13,27 +13,24 @@ export default function Navbar() {
 
       {/* Nav Links */}
       <div className="space-x-6 font-modern hidden md:flex">
-        <a
-          href="#hero"
-          className="text-base font-semibold hover:text-hatchiGold"
-        >
+        <a href="#hero" className="text-base font-medium hover:text-hatchiGold transition">
           Home
         </a>
-        <a href="#whatishatchi" className="hover:text-hatchiGold">
+        <a href="#whatishatchi" className="text-base font-medium hover:text-hatchiGold transition">
           Story of Hatchi
         </a>
-        <a href="#tokenomics" className="hover:text-hatchiGold">
+        <a href="#tokenomics" className="text-base font-medium hover:text-hatchiGold transition">
           Tokenomics
         </a>
-        <a href="#roadmap" className="hover:text-hatchiGold">
+        <a href="#roadmap" className="text-base font-medium hover:text-hatchiGold transition">
           Roadmap
         </a>
-        <a href="#contact" className="hover:text-hatchiGold">
+        <a href="#contact" className="text-base font-medium hover:text-hatchiGold transition">
           Contact
         </a>
         <a
           href="#giveaway"
-          className="text-lg font-bold text-hatchiGold hover:opacity-80 transition-opacity"
+          className="text-base font-medium text-hatchiGold hover:opacity-80 transition-opacity"
         >
           🎁 Giveaway (Coming soon.)
         </a>
