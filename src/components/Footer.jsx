@@ -91,10 +91,10 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-5">
-            <a href="/#hero" className="hover:text-white transition">
+            <a href="#hero" className="hover:text-white transition">
               Privacy Policy
             </a>
-            <a href="/#hero" className="hover:text-white transition">
+            <a href="#hero" className="hover:text-white transition">
               Terms of Service
             </a>
           </div>
@@ -103,6 +103,7 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
 
