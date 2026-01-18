@@ -100,7 +100,7 @@ export default function WhatIsHatchi() {
               />
 
               <h3 className="text-2xl font-bold text-[#4b3827]">
-                Hatchi
+                Hatchisol
               </h3>
 
               <h4 className="text-xl font-bold text-[#6b4a2f] mt-1">
@@ -176,3 +176,4 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
+
