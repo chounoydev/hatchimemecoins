@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 px-4 text-center bg-[#FFF9EE]"
+      className="py-20 px-4 text-center bg-transparent"
     >
       {/* Heading */}
       <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900">
@@ -34,7 +34,7 @@ export default function Contact() {
           href="https://t.me/+DjRyRpeurCQ4ZDhl"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 hover:text-yellow-500 transition-colors"
+          className="flex items-center gap-3 hover:text-yellow-400 transition-colors"
         >
           <FaTelegramPlane className="text-yellow-400 text-xl" />
           <span className="font-medium">Telegram</span>
@@ -45,7 +45,7 @@ export default function Contact() {
           href="https://x.com/HATCHISOL"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 hover:text-yellow-500 transition-colors"
+          className="flex items-center gap-3 hover:text-yellow-400 transition-colors"
         >
           <FaXTwitter className="text-yellow-400 text-xl" />
           <span className="font-medium">Twitter</span>
@@ -56,7 +56,7 @@ export default function Contact() {
           href="https://www.facebook.com/profile.php?id=61586492634967"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 hover:text-yellow-500 transition-colors"
+          className="flex items-center gap-3 hover:text-yellow-400 transition-colors"
         >
           <FaFacebookF className="text-yellow-400 text-xl" />
           <span className="font-medium">Facebook</span>
@@ -65,7 +65,7 @@ export default function Contact() {
         {/* Email */}
         <button
           onClick={handleEmailClick}
-          className="flex items-center gap-3 hover:text-yellow-500 transition-colors"
+          className="flex items-center gap-3 hover:text-yellow-400 transition-colors"
         >
           <FaEnvelope className="text-yellow-400 text-xl" />
           <span className="font-medium">Email Us</span>
