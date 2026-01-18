@@ -7,32 +7,20 @@ export default function Footer() {
 
         {/* Brand Section */}
         <div>
-          {/* Logo + Name */}
-          <div className="flex items-center gap-4 mb-4">
-            {/* TRANSPARENT LOGO */}
-            <div className="w-16 h-16 flex items-center justify-center">
-              <img
-                src="hatchi2.png"
-                alt="Hatchi Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
+          {/* Logo + Name (ONE IMAGE ONLY) */}
+          <div className="flex items-center gap-3 mb-4">
+            <img
+              src="/hatchi2.png"
+              alt="Hatchi Logo"
+              className="w-10 h-10 object-contain"
+            />
 
-            <h3 className="text-white text-xl font-semibold">
+            <h3 className="text-white text-lg font-semibold">
               $HATCHI
             </h3>
           </div>
 
-          {/* BIG HATCHI IMAGE */}
-          <div className="mt-6">
-            <img
-              src="hatchi2.png"
-              alt="Hatchi Mascot"
-              className="w-56 md:w-64 lg:w-72 h-auto"
-            />
-          </div>
-
-          <p className="text-sm max-w-sm leading-relaxed mt-5">
+          <p className="text-sm max-w-sm leading-relaxed">
             The next generation of meme coins.
             <br />
             Built by the community, for the community.
@@ -40,7 +28,6 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6">
-            {/* Telegram */}
             <a
               href="https://t.me/+DjRyRpeurCQ4ZDhl"
               target="_blank"
@@ -49,11 +36,10 @@ export default function Footer() {
               aria-label="Telegram"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9.9 16.2l-.4 4.2c.6 0 .9-.3 1.2-.6l2.9-2.7 6 4.4c1.1.6 1.9.3 2.2-1l4-18.8c.4-1.6-.6-2.2-1.7-1.8L1.3 9.7c-1.6.6-1.6 1.5-.3 1.9l5.5 1.7L19.2 6c.7-.4 1.3-.2.8.2"/>
+                <path d="M9.9 16.2l-.4 4.2c.6 0 .9-.3 1.2-.6l2.9-2.7 6 4.4c1.1.6 1.9.3 2.2-1l4-18.8c.4-1.6-.6-2.2-1.7-1.8L1.3 9.7c-1.6.6-1.6 1.5-.3 1.9l5.5 1.7L19.2 6c.7-.4 1.3-.2.8.2" />
               </svg>
             </a>
 
-            {/* X */}
             <a
               href="https://x.com/HATCHISOL"
               target="_blank"
@@ -62,18 +48,17 @@ export default function Footer() {
               aria-label="X"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.3 2H21l-6.6 7.5L22 22h-6.6l-5.2-6.6L4.4 22H1.7l7.1-8L2 2h6.7l4.7 6L18.3 2z"/>
+                <path d="M18.3 2H21l-6.6 7.5L22 22h-6.6l-5.2-6.6L4.4 22H1.7l7.1-8L2 2h6.7l4.7 6L18.3 2z" />
               </svg>
             </a>
 
-            {/* Email */}
             <a
               href="mailto:hatchidev@gmail.com"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
               aria-label="Email"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
               </svg>
             </a>
           </div>
@@ -107,10 +92,10 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-5">
-            <a href="#hero" className="hover:text-white transition">
+            <a href="#" className="hover:text-white transition">
               Privacy Policy
             </a>
-            <a href="#hero" className="hover:text-white transition">
+            <a href="#" className="hover:text-white transition">
               Terms of Service
             </a>
           </div>
