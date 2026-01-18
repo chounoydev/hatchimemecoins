@@ -47,19 +47,29 @@ body {
 }
 
 /* -------------------------- */
-/* Sliding banner animation */
+/* SLIDING BANNER (FIXED – INFINITE) */
 /* -------------------------- */
-@keyframes slide-left {
+
+/*
+  IMPORTANT:
+  - This replaces the old ending animation behavior
+  - Works with className="animate-slide"
+  - No visible reset, no gap
+*/
+
+@keyframes slide {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
-.slide-banner {
-  animation: slide-left 15s linear infinite;
+.animate-slide {
+  display: flex;
+  width: max-content;
+  animation: slide 18s linear infinite;
 }
 
 /* -------------------------- */
@@ -128,16 +138,17 @@ body {
 }
 
 /* -------------------------- */
-/* NEW: Smooth green blinking for roadmap checkmarks */
+/* Smooth green blinking for roadmap checkmarks */
 /* -------------------------- */
 @keyframes blink-green {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
-    color: #22c55e; /* bright green */
+    color: #22c55e;
   }
   50% {
     opacity: 0.3;
-    color: #16a34a; /* slightly darker green for smooth fade */
+    color: #16a34a;
   }
 }
 
