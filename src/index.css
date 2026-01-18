@@ -111,7 +111,7 @@ body {
 }
 
 /* -------------------------- */
-/* Blinking animation for roadmap checkmarks */
+/* Blinking animation for roadmap checkmarks (original) */
 /* -------------------------- */
 @keyframes blink {
   0%,
@@ -125,4 +125,22 @@ body {
 
 .animate-blink {
   animation: blink 0.8s infinite;
+}
+
+/* -------------------------- */
+/* NEW: Smooth green blinking for roadmap checkmarks */
+/* -------------------------- */
+@keyframes blink-green {
+  0%, 100% {
+    opacity: 1;
+    color: #22c55e; /* bright green */
+  }
+  50% {
+    opacity: 0.3;
+    color: #16a34a; /* slightly darker green for smooth fade */
+  }
+}
+
+.animate-blink-green {
+  animation: blink-green 1s ease-in-out infinite;
 }
