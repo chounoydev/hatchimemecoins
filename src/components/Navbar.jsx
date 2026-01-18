@@ -13,7 +13,10 @@ export default function Navbar() {
 
       {/* Nav Links */}
       <div className="space-x-6 font-modern hidden md:flex">
-        <a href="#hero" className="hover:text-hatchiGold">
+        <a
+          href="#hero"
+          className="text-base font-semibold hover:text-hatchiGold"
+        >
           Home
         </a>
         <a href="#whatishatchi" className="hover:text-hatchiGold">
