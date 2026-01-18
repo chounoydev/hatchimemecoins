@@ -4,30 +4,31 @@ import { CheckCircle } from "lucide-react";
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="py-28">
+    <section id="roadmap" className="py-24">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Header */}
-        <div className="text-center mb-24">
+        <div className="text-center mb-20">
           <p className="text-sm uppercase tracking-widest text-orange-500">
             Our Journey
           </p>
+
           <h2 className="text-4xl md:text-5xl font-bold mt-3 text-orange-500">
             Roadmap
           </h2>
+
           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-lg">
             Our path to becoming the most powerful meme coin community.
           </p>
         </div>
 
-        {/* Timeline */}
+        {/* Timeline Wrapper */}
         <div className="relative">
 
-          {/* Center Line */}
+          {/* Vertical Line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-orange-400/30 -translate-x-1/2" />
 
-          {/* Phase 1 */}
-          <TimelineRow number="1" side="left">
+          <TimelineRow number="1" align="left">
             <RoadmapCard
               phase="Phase 1"
               title="Launch Phase"
@@ -40,8 +41,7 @@ export default function Roadmap() {
             />
           </TimelineRow>
 
-          {/* Phase 2 */}
-          <TimelineRow number="2" side="right">
+          <TimelineRow number="2" align="right">
             <RoadmapCard
               phase="Phase 2"
               title="Growth Phase"
@@ -53,8 +53,7 @@ export default function Roadmap() {
             />
           </TimelineRow>
 
-          {/* Phase 3 */}
-          <TimelineRow number="3" side="left">
+          <TimelineRow number="3" align="left">
             <RoadmapCard
               phase="Phase 3"
               title="Expansion Phase"
@@ -67,8 +66,7 @@ export default function Roadmap() {
             />
           </TimelineRow>
 
-          {/* Phase 4 */}
-          <TimelineRow number="4" side="right">
+          <TimelineRow number="4" align="right">
             <RoadmapCard
               phase="Phase 4"
               title="Future Vision"
@@ -86,27 +84,27 @@ export default function Roadmap() {
 }
 
 /* ===============================
-   Timeline Row (KEY FIX)
+   Timeline Row (SAFE FLEX)
 ================================= */
-function TimelineRow({ number, side, children }) {
+function TimelineRow({ number, align, children }) {
   return (
-    <div className="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center mb-28">
+    <div className="relative flex flex-col md:flex-row items-start md:items-center mb-24">
 
-      {/* Left Card */}
-      <div className={`${side === "left" ? "md:pr-16" : ""}`}>
-        {side === "left" && children}
+      {/* Left column */}
+      <div className="hidden md:block md:w-1/2">
+        {align === "left" && children}
       </div>
 
-      {/* Center Dot */}
-      <div className="hidden md:flex justify-center">
-        <div className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg shadow-md">
+      {/* Center dot */}
+      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
+        <div className="w-11 h-11 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold shadow-md">
           {number}
         </div>
       </div>
 
-      {/* Right Card */}
-      <div className={`${side === "right" ? "md:pl-16" : ""}`}>
-        {side === "right" && children}
+      {/* Right column */}
+      <div className="w-full md:w-1/2">
+        {align === "right" && children}
       </div>
 
     </div>
@@ -114,27 +112,27 @@ function TimelineRow({ number, side, children }) {
 }
 
 /* ===============================
-   Roadmap Card
+   Roadmap Card (SAFE)
 ================================= */
 function RoadmapCard({ phase, title, items }) {
   return (
-    <div className="rounded-xl p-8 border border-orange-400/30 bg-orange-900/20 backdrop-blur-sm">
+    <div className="rounded-xl p-7 border border-orange-400/30 bg-orange-900/20 backdrop-blur-sm">
 
       <p className="text-sm text-orange-400 mb-2 font-semibold">
         {phase}
       </p>
 
-      <h3 className="text-2xl font-bold text-white mb-6">
+      <h3 className="text-2xl font-bold text-white mb-5">
         {title}
       </h3>
 
-      <ul className="space-y-4">
+      <ul className="space-y-3">
         {items.map((item, index) => (
           <li
             key={index}
             className="flex items-start gap-3 text-white text-lg"
           >
-            <CheckCircle className="w-6 h-6 text-green-400 mt-1 animate-blink" />
+            <CheckCircle className="w-5 h-5 text-green-400 mt-1 animate-blink" />
             <span>{item}</span>
           </li>
         ))}
