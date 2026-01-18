@@ -1,9 +1,9 @@
-import { FaFacebookF, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
+import { FaTelegramPlane, FaFacebookF, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Contact() {
   const handleEmailClick = () => {
-    const email = "hatchidev@gmail.com"; // 🔴 CHANGE THIS TO YOUR EMAIL
+    const email = "hatchidev@gmail.com";
     const subject = "Contact Inquiry";
     const body = "Hello,\n\nI would like to get in touch with you.\n\n";
 
@@ -13,23 +13,31 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 px-4 text-center">
-      <h2 className="text-4xl font-playful mb-8 text-yellow-400">Contact Us</h2>
+    <section
+      id="contact"
+      className="py-20 px-4 text-center bg-[#FFF9EE]"
+    >
+      {/* Heading */}
+      <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900">
+        Contact Us
+      </h2>
 
-      <p className="mb-10 font-modern">
+      <p className="max-w-xl mx-auto mb-12 text-gray-600 text-lg">
         Contact us directly or connect with us on social media
       </p>
 
-      {/* Contact Buttons */}
-      <div className="flex flex-col sm:flex-row justify-center gap-6">
+      {/* Icon Row (WhiteShiba Style) */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-10 text-gray-800">
+
         {/* Telegram */}
         <a
           href="https://t.me/+DjRyRpeurCQ4ZDhl"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
+          className="flex items-center gap-3 hover:text-yellow-500 transition-colors"
         >
-          <FaTelegramPlane /> Telegram
+          <FaTelegramPlane className="text-yellow-400 text-xl" />
+          <span className="font-medium">Telegram</span>
         </a>
 
         {/* Twitter / X */}
@@ -37,28 +45,32 @@ export default function Contact() {
           href="https://x.com/HATCHISOL"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
+          className="flex items-center gap-3 hover:text-yellow-500 transition-colors"
         >
-          <FaXTwitter /> Twitter
+          <FaXTwitter className="text-yellow-400 text-xl" />
+          <span className="font-medium">Twitter</span>
         </a>
 
         {/* Facebook */}
         <a
-          href="https://www.facebook.com/profile.php?id=61586492634967&rdid=IYHRWweycRqCaVE2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JJuVAM3XM#" // 🔴 CHANGE THIS TO YOUR PAGE
+          href="https://www.facebook.com/profile.php?id=61586492634967"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
+          className="flex items-center gap-3 hover:text-yellow-500 transition-colors"
         >
-          <FaFacebookF /> Facebook
+          <FaFacebookF className="text-yellow-400 text-xl" />
+          <span className="font-medium">Facebook</span>
         </a>
 
         {/* Email */}
         <button
           onClick={handleEmailClick}
-          className="bg-yellow-400 text-hatchiBrown px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors flex items-center justify-center gap-3 text-lg"
+          className="flex items-center gap-3 hover:text-yellow-500 transition-colors"
         >
-          <FaEnvelope /> Email Us
+          <FaEnvelope className="text-yellow-400 text-xl" />
+          <span className="font-medium">Email Us</span>
         </button>
+
       </div>
     </section>
   );
