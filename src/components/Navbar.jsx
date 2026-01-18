@@ -17,7 +17,7 @@ export default function Navbar() {
           Home
         </a>
         <a href="#whatishatchi" className="text-base font-medium hover:text-hatchiGold transition">
-          Story of Hatchi
+          About
         </a>
         <a href="#tokenomics" className="text-base font-medium hover:text-hatchiGold transition">
           Tokenomics
@@ -69,3 +69,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
