@@ -11,7 +11,7 @@ export default function Footer() {
             {/* LOGO IMAGE ADDED */}
             <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center overflow-hidden">
               <img
-                src="/images/hatchisol-logo.png"
+                src="hatchi2.png"
                 alt="Hatchisol Logo"
                 className="w-full h-full object-contain"
               />
@@ -118,3 +118,4 @@ export default function Footer() {
     </footer>
   );
 }
+
