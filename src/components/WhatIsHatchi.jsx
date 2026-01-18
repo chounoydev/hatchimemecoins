@@ -102,16 +102,24 @@ export default function WhatIsHatchi() {
         </div>
       </div>
 
-      {/* SLIDING BANNER (FIXED – INFINITE) */}
+      {/* SLIDING BANNER – SMOOTH, FAST, NO END */}
       <div className="w-full h-12 bg-[#d4af37] overflow-hidden flex items-center mt-24">
         <div className="flex whitespace-nowrap font-bold text-black animate-slide text-lg">
+          {/* SET 1 */}
           <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
           <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
           <span className="mx-10">💰 BUY MORE $HATCHI</span>
           <span className="mx-10">📈 TRENDING MEMECOIN</span>
           <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
 
-          {/* DUPLICATE FOR SEAMLESS LOOP */}
+          {/* SET 2 */}
+          <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
+          <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
+          <span className="mx-10">💰 BUY MORE $HATCHI</span>
+          <span className="mx-10">📈 TRENDING MEMECOIN</span>
+          <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
+
+          {/* SET 3 (extra smoothness, no visible loop) */}
           <span className="mx-10">🐶 $HATCHI SOLDIERS</span>
           <span className="mx-10">🎯 GOAL $2M+ MARKET CAP</span>
           <span className="mx-10">💰 BUY MORE $HATCHI</span>
