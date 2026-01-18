@@ -1,3 +1,5 @@
+import { CheckCircle } from "lucide-react";
+
 export default function Roadmap() {
   return (
     <section id="roadmap" className="py-24">
@@ -22,10 +24,10 @@ export default function Roadmap() {
           {/* Center Line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-300 -translate-x-1/2" />
 
-          {/* Phase 1 */}
           <TimelineItem
-            align="left"
-            phase="1"
+            side="left"
+            phase="Phase 1"
+            number="1"
             title="Launch Phase"
             items={[
               "Fair launch on Pump.fun",
@@ -35,23 +37,22 @@ export default function Roadmap() {
             ]}
           />
 
-          {/* Phase 2 */}
           <TimelineItem
-            align="right"
-            phase="2"
+            side="right"
+            phase="Phase 2"
+            number="2"
             title="Growth Phase"
             items={[
-              "CoinGecko listing",
-              "CoinMarketCap listing",
+              "CoinGecko & CoinMarketCap listings",
               "Influencer partnerships",
               "10,000+ holders",
             ]}
           />
 
-          {/* Phase 3 */}
           <TimelineItem
-            align="left"
-            phase="3"
+            side="left"
+            phase="Phase 3"
+            number="3"
             title="Expansion Phase"
             items={[
               "CEX listings",
@@ -61,18 +62,16 @@ export default function Roadmap() {
             ]}
           />
 
-          {/* Phase 4 */}
           <TimelineItem
-            align="right"
-            phase="4"
+            side="right"
+            phase="Phase 4"
+            number="4"
             title="Future Vision"
             items={[
-              "Community driven decisions",
-              "Governance development",
-              "Long-term ecosystem growth",
+              "To be decided by the community",
+              "Your voice matters",
             ]}
           />
-
         </div>
       </div>
     </section>
@@ -82,30 +81,30 @@ export default function Roadmap() {
 /* ===============================
    Timeline Item
 ================================= */
-function TimelineItem({ align, phase, title, items }) {
-  const isLeft = align === "left";
+function TimelineItem({ side, phase, number, title, items }) {
+  const isLeft = side === "left";
 
   return (
     <div className="relative flex flex-col md:flex-row items-center mb-24">
 
-      {/* Left Content */}
+      {/* Left Card */}
       {isLeft && (
-        <div className="md:w-1/2 md:pr-12 w-full mb-10 md:mb-0 text-right">
-          <Card title={title} items={items} />
+        <div className="md:w-1/2 md:pr-12 w-full mb-10 md:mb-0">
+          <RoadmapCard phase={phase} title={title} items={items} />
         </div>
       )}
 
-      {/* Center Circle */}
-      <div className="absolute md:static left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 z-10">
-        <div className="w-11 h-11 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold shadow-lg">
-          {phase}
+      {/* Center Number */}
+      <div className="absolute md:static left-1/2 -translate-x-1/2 md:translate-x-0 z-10">
+        <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold">
+          {number}
         </div>
       </div>
 
-      {/* Right Content */}
+      {/* Right Card */}
       {!isLeft && (
         <div className="md:w-1/2 md:pl-12 w-full mt-10 md:mt-0">
-          <Card title={title} items={items} />
+          <RoadmapCard phase={phase} title={title} items={items} />
         </div>
       )}
     </div>
@@ -113,25 +112,34 @@ function TimelineItem({ align, phase, title, items }) {
 }
 
 /* ===============================
-   Card Component (UPDATED ONLY)
+   Roadmap Card
 ================================= */
-function Card({ title, items }) {
+function RoadmapCard({ phase, title, items }) {
   return (
     <div
       className="
-        rounded-xl p-6 md:p-7 backdrop-blur-sm
+        rounded-xl p-6 md:p-7
         border border-orange-400/30
         bg-[rgba(139,69,19,0.25)]
+        backdrop-blur-sm
       "
     >
+      {/* Phase Label */}
+      <p className="text-sm text-orange-400 mb-2 flex items-center gap-2">
+        <span className="w-2 h-2 rounded-full bg-orange-400"></span>
+        {phase}
+      </p>
+
+      {/* Title */}
       <h3 className="text-xl font-semibold mb-4 text-white">
         {title}
       </h3>
 
+      {/* List */}
       <ul className="space-y-3">
-        {items.map((item, i) => (
-          <li key={i} className="flex items-start gap-3 text-white">
-            <span className="text-green-400 animate-blink">✓</span>
+        {items.map((item, index) => (
+          <li key={index} className="flex items-start gap-3 text-white">
+            <CheckCircle className="w-5 h-5 text-green-400 animate-blink" />
             <span>{item}</span>
           </li>
         ))}
