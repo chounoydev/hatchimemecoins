@@ -1,4 +1,5 @@
-import { FaTelegram, FaTwitter, FaFacebookF } from "react-icons/fa";
+import { FaTelegram, FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Navbar() {
   return (
@@ -21,7 +22,6 @@ export default function Navbar() {
         <a href="#tokenomics" className="hover:text-hatchiGold">
           Tokenomics
         </a>
-        {/* ✅ ROADMAP BUTTON ADDED */}
         <a href="#roadmap" className="hover:text-hatchiGold">
           Roadmap
         </a>
@@ -43,9 +43,9 @@ export default function Navbar() {
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-hatchiGold"
-          aria-label="Twitter"
+          aria-label="X"
         >
-          <FaTwitter />
+          <FaXTwitter />
         </a>
         <a
           href="https://t.me/+DjRyRpeurCQ4ZDhl"
