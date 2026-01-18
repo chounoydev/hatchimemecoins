@@ -10,7 +10,7 @@ export default function Roadmap() {
           <p className="text-sm uppercase tracking-widest text-orange-500">
             Our Journey
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 text-orange-500">
             Roadmap
           </h2>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto">
@@ -18,14 +18,14 @@ export default function Roadmap() {
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-y-24">
+        {/* Timeline Wrapper */}
+        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-y-28">
 
-          {/* Center Line */}
+          {/* Center Vertical Line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-300 -translate-x-1/2" />
 
-          {/* ===== PHASE 1 ===== */}
-          <div className="md:col-span-1 md:col-start-1">
+          {/* ========== PHASE 1 (LEFT) ========== */}
+          <div className="md:col-start-1">
             <RoadmapCard
               phase="Phase 1"
               title="Launch Phase"
@@ -39,15 +39,12 @@ export default function Roadmap() {
           </div>
 
           <TimelineDot number="1" />
-
           <div className="hidden md:block" />
 
-          {/* ===== PHASE 2 ===== */}
+          {/* ========== PHASE 2 (RIGHT) ========== */}
           <div className="hidden md:block" />
-
           <TimelineDot number="2" />
-
-          <div className="md:col-span-1 md:col-start-3">
+          <div className="md:col-start-3">
             <RoadmapCard
               phase="Phase 2"
               title="Growth Phase"
@@ -59,8 +56,8 @@ export default function Roadmap() {
             />
           </div>
 
-          {/* ===== PHASE 3 ===== */}
-          <div className="md:col-span-1 md:col-start-1">
+          {/* ========== PHASE 3 (LEFT) ========== */}
+          <div className="md:col-start-1">
             <RoadmapCard
               phase="Phase 3"
               title="Expansion Phase"
@@ -74,15 +71,12 @@ export default function Roadmap() {
           </div>
 
           <TimelineDot number="3" />
-
           <div className="hidden md:block" />
 
-          {/* ===== PHASE 4 ===== */}
+          {/* ========== PHASE 4 (RIGHT) ========== */}
           <div className="hidden md:block" />
-
           <TimelineDot number="4" />
-
-          <div className="md:col-span-1 md:col-start-3">
+          <div className="md:col-start-3">
             <RoadmapCard
               phase="Phase 4"
               title="Future Vision"
@@ -103,8 +97,8 @@ export default function Roadmap() {
 ================================= */
 function TimelineDot({ number }) {
   return (
-    <div className="flex justify-center">
-      <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold z-10">
+    <div className="flex justify-center relative z-10">
+      <div className="w-11 h-11 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold shadow-md">
         {number}
       </div>
     </div>
@@ -120,19 +114,22 @@ function RoadmapCard({ phase, title, items }) {
       className="
         rounded-xl p-6 md:p-7
         border border-orange-400/30
-        bg-[rgba(139,69,19,0.25)]
+        bg-orange-900/20
         backdrop-blur-sm
       "
     >
+      {/* Phase label */}
       <p className="text-sm text-orange-400 mb-2 flex items-center gap-2">
         <span className="w-2 h-2 rounded-full bg-orange-400"></span>
         {phase}
       </p>
 
+      {/* Title */}
       <h3 className="text-xl font-semibold mb-4 text-white">
         {title}
       </h3>
 
+      {/* List */}
       <ul className="space-y-3">
         {items.map((item, index) => (
           <li key={index} className="flex items-start gap-3 text-white">
