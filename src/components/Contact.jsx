@@ -13,21 +13,19 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 px-4 text-center bg-transparent"
-    >
-      {/* Heading */}
-      <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900">
+    <section id="contact" className="py-20 px-4 text-center bg-transparent">
+      {/* Title */}
+      <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-yellow-400">
         Contact Us
       </h2>
 
-      <p className="max-w-xl mx-auto mb-12 text-gray-600 text-lg">
+      {/* Subtitle */}
+      <p className="max-w-xl mx-auto mb-12 text-white text-lg">
         Contact us directly or connect with us on social media
       </p>
 
-      {/* Icon Row (WhiteShiba Style) */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-10 text-gray-800">
+      {/* Icon Row */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-10 text-white">
 
         {/* Telegram */}
         <a
@@ -40,7 +38,7 @@ export default function Contact() {
           <span className="font-medium">Telegram</span>
         </a>
 
-        {/* Twitter / X */}
+        {/* Twitter */}
         <a
           href="https://x.com/HATCHISOL"
           target="_blank"
