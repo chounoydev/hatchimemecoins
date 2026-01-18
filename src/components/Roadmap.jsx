@@ -1,6 +1,21 @@
 "use client";
 
+import { useRef } from "react";
+
 export default function Roadmap() {
+  // Refs for each phase card
+  const phaseRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  // Scroll to specific phase
+  const scrollToPhase = (index) => {
+    if (phaseRefs[index].current) {
+      phaseRefs[index].current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
+
   return (
     <section id="roadmap" className="py-24">
       <div className="max-w-6xl mx-auto px-4">
@@ -16,6 +31,19 @@ export default function Roadmap() {
           <p className="text-gray-200 mt-4 max-w-xl mx-auto text-lg">
             Our path to becoming the most powerful meme coin community.
           </p>
+
+          {/* Phase Buttons */}
+          <div className="flex justify-center gap-4 mt-6 flex-wrap">
+            {["Phase 1", "Phase 2", "Phase 3", "Phase 4"].map((phase, idx) => (
+              <button
+                key={idx}
+                onClick={() => scrollToPhase(idx)}
+                className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded font-semibold transition"
+              >
+                {phase}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Timeline */}
@@ -25,7 +53,7 @@ export default function Roadmap() {
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-orange-400/30 -translate-x-1/2" />
 
           {/* Phase 1 */}
-          <div className="relative flex flex-col md:flex-row items-center mb-24">
+          <div ref={phaseRefs[0]} className="relative flex flex-col md:flex-row items-center mb-24">
             <div className="md:w-1/2 md:pr-16">
               <Card
                 phase="Phase 1"
@@ -43,7 +71,7 @@ export default function Roadmap() {
           </div>
 
           {/* Phase 2 */}
-          <div className="relative flex flex-col md:flex-row items-center mb-24">
+          <div ref={phaseRefs[1]} className="relative flex flex-col md:flex-row items-center mb-24">
             <div className="md:w-1/2" />
             <Dot number="2" />
             <div className="md:w-1/2 md:pl-16">
@@ -60,7 +88,7 @@ export default function Roadmap() {
           </div>
 
           {/* Phase 3 */}
-          <div className="relative flex flex-col md:flex-row items-center mb-24">
+          <div ref={phaseRefs[2]} className="relative flex flex-col md:flex-row items-center mb-24">
             <div className="md:w-1/2 md:pr-16">
               <Card
                 phase="Phase 3"
@@ -78,7 +106,7 @@ export default function Roadmap() {
           </div>
 
           {/* Phase 4 */}
-          <div className="relative flex flex-col md:flex-row items-center">
+          <div ref={phaseRefs[3]} className="relative flex flex-col md:flex-row items-center">
             <div className="md:w-1/2" />
             <Dot number="4" />
             <div className="md:w-1/2 md:pl-16">
