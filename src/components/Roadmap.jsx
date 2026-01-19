@@ -1,4 +1,3 @@
-"use client";
 
 export default function Roadmap() {
   return (
@@ -128,4 +127,5 @@ function Card({ phase, title, items }) {
     </div>
   );
 }
+
 
