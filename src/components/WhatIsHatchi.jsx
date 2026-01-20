@@ -52,21 +52,21 @@ export default function WhatIsHatchi() {
             </h2>
 
             <p className="text-lg text-white/85 leading-relaxed">
-              Hatchi was a real dog — a fluffy, two-year-old Chow Chow who filled
+              Hatchi was a real dog  a fluffy, two year old Chow Chow who filled
               our lives with loyalty, warmth, and unconditional love. He wasn’t
-              just a pet — he was family, a constant companion, and a source of
+              just a pet  he was family, a constant companion, and a source of
               joy every single day.
               <br /><br />
               On January 6, 2026, just days after the New Year, Hatchi suddenly
               became weak. He lost his appetite, and despite every effort to
               help him, he peacefully passed away. Losing him so young left a
-              deep emptiness in our hearts — but also a reminder of how powerful
+              deep emptiness in our hearts  but also a reminder of how powerful
               real bonds can be.
               <br /><br />
               From that love and loss,{" "}
               <span className="text-[#d4af37] font-bold">$HATCHI</span>{" "}
-              was born — not as just another memecoin, but as a
-              <b> community-driven project</b> built on shared values, real
+              was born  not as just another memecoin, but as a
+              <b> community driven project</b> built on shared values, real
               emotion, and collective belief.
               <br /><br />
               $HATCHI is powered by its community. Every holder is part of the
@@ -175,3 +175,4 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
+
