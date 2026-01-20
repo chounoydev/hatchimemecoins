@@ -10,7 +10,7 @@ export default function WhatIsHatchi() {
     const fetchPrice = async () => {
       try {
         const res = await fetch(
-          "https://api.dexscreener.com/latest/dex/pairs/solana/2y8qhdp4zox3mtkijnpcqifqunchde69lkzntyvfjeqg"
+          "https://api.dexscreener.com/latest/dex/pairs/solana/6qjqdayumhkda55jp8h48fv2r7ejmffudcfmy6z9a6uh"
         );
         const data = await res.json();
         if (!data.pairs || !data.pairs.length) return;
@@ -51,7 +51,6 @@ export default function WhatIsHatchi() {
               The Story of Hatchi
             </h2>
 
-            {/* ✅ UPDATED STORY (COMMUNITY-DRIVEN) */}
             <p className="text-lg text-white/85 leading-relaxed">
               Hatchi was a real dog — a fluffy, two-year-old Chow Chow who filled
               our lives with loyalty, warmth, and unconditional love. He wasn’t
@@ -103,10 +102,9 @@ export default function WhatIsHatchi() {
                 Hatchi
               </h3>
 
-              <h4 className="text-xl font-bold text-[#6b4a2f] mt-1">
-                march 5, 2023
-                Jan 6, 2026
-              </h4>
+              <p className="text-[#6b4a2f] font-semibold mt-1">
+                March 5, 2023 – January 6, 2026
+              </p>
 
               <p className="text-[#7a5a3a] font-semibold mt-2">
                 Loyalty • Love • Legacy
@@ -117,24 +115,24 @@ export default function WhatIsHatchi() {
         </div>
       </div>
 
-      {/* SLIDING BANNER – SMOOTH, FAST, NO END */}
+      {/* SLIDING BANNER */}
       <div className="w-full h-12 bg-[#d4af37] overflow-hidden flex items-center mt-24">
         <div className="flex whitespace-nowrap font-bold text-black animate-slide text-lg">
           <span className="mx-10">🐶 $HATCHI ARYMY</span>
           <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
-          <span className="mx-10">💰 BUY MORE $HATCHI</span>
+          <span className="mx-10">💰 HODL $HATCHI</span>
           <span className="mx-10">📈 TRENDING MEMECOIN</span>
           <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
 
           <span className="mx-10">🐶 $HATCHI ARYMY</span>
           <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
-          <span className="mx-10">💰 BUY MORE $HATCHI</span>
+          <span className="mx-10">💰 HODL $HATCHI</span>
           <span className="mx-10">📈 TRENDING MEMECOIN</span>
           <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
 
           <span className="mx-10">🐶 $HATCHI ARYMY</span>
           <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
-          <span className="mx-10">💰 BUY MORE $HATCHI</span>
+          <span className="mx-10">💰 HODL $HATCHI</span>
           <span className="mx-10">📈 TRENDING MEMECOIN</span>
           <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
         </div>
@@ -168,7 +166,7 @@ export default function WhatIsHatchi() {
 
           <iframe
             title="$HATCHI Live Price"
-            src="https://dexscreener.com/solana/2y8qhdp4zox3mtkijnpcqifqunchde69lkzntyvfjeqg"
+            src="https://dexscreener.com/solana/6qjqdayumhkda55jp8h48fv2r7ejmffudcfmy6z9a6uh"
             style={{ width: "100%", height: "420px", border: "none" }}
             scrolling="no"
           ></iframe>
@@ -177,5 +175,3 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
-
-
