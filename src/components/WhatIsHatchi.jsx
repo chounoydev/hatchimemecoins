@@ -100,11 +100,12 @@ export default function WhatIsHatchi() {
               />
 
               <h3 className="text-2xl font-bold text-[#4b3827]">
-                Hatchisol
+                Hatchi
               </h3>
 
               <h4 className="text-xl font-bold text-[#6b4a2f] mt-1">
-                $HATCHI
+                march 5, 2023
+                Jan 6, 2026
               </h4>
 
               <p className="text-[#7a5a3a] font-semibold mt-2">
@@ -176,4 +177,5 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
+
 
