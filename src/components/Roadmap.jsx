@@ -1,3 +1,4 @@
+import React from "react"; // Ensure React is imported (needed in some Vercel setups)
 
 export default function Roadmap() {
   return (
@@ -35,14 +36,14 @@ export default function Roadmap() {
                 ]}
               />
             </div>
-            <Dot number="1" />
+            <Dot number={1} />
             <div className="md:w-1/2" />
           </div>
 
           {/* Phase 2 */}
           <div className="relative flex flex-col md:flex-row items-center mb-24">
             <div className="md:w-1/2" />
-            <Dot number="2" />
+            <Dot number={2} />
             <div className="md:w-1/2 md:pl-16">
               <Card
                 phase="Phase 2"
@@ -71,14 +72,14 @@ export default function Roadmap() {
                 ]}
               />
             </div>
-            <Dot number="3" />
+            <Dot number={3} />
             <div className="md:w-1/2" />
           </div>
 
           {/* Phase 4 */}
           <div className="relative flex flex-col md:flex-row items-center">
             <div className="md:w-1/2" />
-            <Dot number="4" />
+            <Dot number={4} />
             <div className="md:w-1/2 md:pl-16">
               <Card
                 phase="Phase 4"
@@ -117,7 +118,7 @@ function Card({ phase, title, items }) {
       <ul className="space-y-3 text-white text-lg">
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-2">
-            <span className="inline-block w-5 h-5 text-yellow-400 font-bold animate-blink">
+            <span className="inline-block w-5 h-5 text-yellow-400 font-bold animate-pulse">
               ✔
             </span>
             <span>{item}</span>
@@ -127,5 +128,3 @@ function Card({ phase, title, items }) {
     </div>
   );
 }
-
-
