@@ -31,7 +31,7 @@ export default function WhatIsHatchi() {
     };
 
     fetchPrice();
-    const interval = setInterval(fetchPrice, 1000);
+    const interval = setInterval(fetchPrice, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -175,5 +175,6 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
+
 
 
