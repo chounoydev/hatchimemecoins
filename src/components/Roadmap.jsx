@@ -86,8 +86,9 @@ export default function Roadmap() {
                 title="Future Vision"
                 items={[
                   "To be decided by the community",
-                  "Your voice matters",
+                  "Continuous Growth & Innovation",
                   "Hatchi Charity & Donation Program",
+                  "Your voice matters",
                 ]}
               />
             </div>
@@ -128,4 +129,5 @@ function Card({ phase, title, items }) {
     </div>
   );
 }
+
 
