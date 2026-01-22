@@ -30,14 +30,14 @@ export default function Tokenomics() {
           <div className="bg-hatchiBrown/80 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
             <FaLock className="text-4xl mx-auto mb-4 text-yellow-400" />
             <h3 className="text-xl font-bold mb-2">Liquidity Lock</h3>
-            <p>10M+ $HATCHI Locked on Solana for stability</p>
+            <p>Locked on Solana for stability</p>
           </div>
 
           {/* Dev Hold */}
           <div className="bg-hatchiBrown/80 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
             <FaUserShield className="text-4xl mx-auto mb-4 text-yellow-400" />
             <h3 className="text-xl font-bold mb-2">Dev Hold</h3>
-            <p>7M+ $HATCHI Reserved for growth & development</p>
+            <p>Reserved for growth & development</p>
           </div>
         </div>
       </section>
@@ -95,3 +95,4 @@ export default function Tokenomics() {
     </>
   );
 }
+
