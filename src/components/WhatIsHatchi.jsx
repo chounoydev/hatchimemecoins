@@ -52,31 +52,11 @@ export default function WhatIsHatchi() {
             </h2>
 
             <p className="text-lg text-white/85 leading-relaxed">
-              Hatchi was a real dog  a fluffy, two year old Chow Chow who filled
-              our lives with loyalty, warmth, and unconditional love. He wasn’t
-              just a pet  he was family, a constant companion, and a source of
-              joy every single day.
+              Hatchi was a real dog, a fluffy, two-year-old Chow Chow who filled our lives with pure joy, loyalty, and endless love. On January 6, 2026, just days after the New Year, Hatchi suddenly became weak. He slowly lost his appetite, and despite everything we did to help him, he peacefully passed away. Losing him at such a young age broke our hearts in ways we can barely describe. He was more than a pet — he was family, our constant companion, and the light of our home.
               <br /><br />
-              On January 6, 2026, just days after the New Year, Hatchi suddenly
-              became weak. He lost his appetite, and despite every effort to
-              help him, he peacefully passed away. Losing him so young left a
-              deep emptiness in our hearts  but also a reminder of how powerful
-              real bonds can be.
+              The pain of his loss was overwhelming, but it also reminded us how deeply he had touched our lives. Because of that love and that heartbreak, we decided to create <span className="text-[#d4af37] font-bold">$HATCHI</span> — a memecoin born from real emotion, not just hype. This project is our way of keeping Hatchi's memory alive forever. Through this coin, his spirit of loyalty, joy, and unconditional love continues on — in a community, in a movement, and hopefully in something that can bring happiness to many others, just like he did for us.
               <br /><br />
-              From that love and loss,{" "}
-              <span className="text-[#d4af37] font-bold">$HATCHI</span>{" "}
-              was born  not as just another memecoin, but as a
-              <b> community driven project</b> built on shared values, real
-              emotion, and collective belief.
-              <br /><br />
-              $HATCHI is powered by its community. Every holder is part of the
-              journey, every voice matters, and every contribution helps shape
-              the future of the project. This is not about short-term hype, but
-              about growing together with loyalty, transparency, and purpose.
-              <br /><br />
-              Hatchi’s spirit lives on through a united community that holds
-              with conviction, supports one another, and believes in something
-              bigger than themselves.
+              Hatchi may have gone to heaven, but he will never truly leave us. He is the heart and soul behind <span className="text-[#d4af37] font-bold">$HATCHI</span>.
             </p>
           </div>
 
@@ -175,7 +155,3 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
-
-
-
-
