@@ -66,7 +66,7 @@ export default function Roadmap() {
                 title="Expansion Phase"
                 items={[
                   "CEX listings",
-                  "NFT collection launch",
+                  "DAO Governance Integration",
                   "Merchandise store",
                   "Strategic partnerships",
                 ]}
@@ -128,3 +128,4 @@ function Card({ phase, title, items }) {
     </div>
   );
 }
+
