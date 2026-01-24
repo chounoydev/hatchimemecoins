@@ -77,8 +77,8 @@ export default function Footer() {
           </h4>
 
           <ul className="space-y-3 text-sm">
-            <li><a href="#home" className="hover:text-white transition">Home</a></li>
-            <li><a href="#story" className="hover:text-white transition">Story of Hatchi</a></li>
+            <li><a href="#hero" className="hover:text-white transition">Home</a></li>
+            <li><a href="#whatishatchi" className="hover:text-white transition">About</a></li>
             <li><a href="#tokenomics" className="hover:text-white transition">Tokenomics</a></li>
             <li><a href="#roadmap" className="hover:text-white transition">Roadmap</a></li>
             <li><a href="#contact" className="hover:text-white transition">Contact</a></li>
@@ -107,3 +107,4 @@ export default function Footer() {
     </footer>
   );
 }
+
