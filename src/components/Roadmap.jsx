@@ -1,5 +1,12 @@
 import React from "react"; // Ensure React is imported (needed in some Vercel setups)
 
+// 🔧 CONTROL WHICH PHASES SHOW ✔
+// Examples:
+// [1] → only Phase 1
+// [1, 2] → Phase 1 & 2
+// [1, 2, 3, 4] → all phases
+const ACTIVE_PHASES = [1];
+
 export default function Roadmap() {
   return (
     <section id="roadmap" className="py-24">
@@ -22,12 +29,13 @@ export default function Roadmap() {
           {/* Vertical Line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-orange-400/30 -translate-x-1/2" />
 
-          {/* Phase 1 */}
+          {/* Phase 1 (LEFT) */}
           <div className="relative flex flex-col md:flex-row items-center mb-24">
             <div className="md:w-1/2 md:pr-16">
               <Card
                 phase="Phase 1"
                 title="Launch Phase"
+                phaseNumber={1}
                 items={[
                   "Fair launch on Pump.fun",
                   "Website launch",
@@ -40,7 +48,7 @@ export default function Roadmap() {
             <div className="md:w-1/2" />
           </div>
 
-          {/* Phase 2 */}
+          {/* Phase 2 (RIGHT) */}
           <div className="relative flex flex-col md:flex-row items-center mb-24">
             <div className="md:w-1/2" />
             <Dot number={2} />
@@ -48,6 +56,7 @@ export default function Roadmap() {
               <Card
                 phase="Phase 2"
                 title="Growth Phase"
+                phaseNumber={2}
                 items={[
                   "CoinGecko & CoinMarketCap listings",
                   "Influencer partnerships",
@@ -58,12 +67,13 @@ export default function Roadmap() {
             </div>
           </div>
 
-          {/* Phase 3 */}
+          {/* Phase 3 (LEFT) */}
           <div className="relative flex flex-col md:flex-row items-center mb-24">
             <div className="md:w-1/2 md:pr-16">
               <Card
                 phase="Phase 3"
                 title="Expansion Phase"
+                phaseNumber={3}
                 items={[
                   "CEX listings",
                   "DAO Governance Integration",
@@ -76,7 +86,7 @@ export default function Roadmap() {
             <div className="md:w-1/2" />
           </div>
 
-          {/* Phase 4 */}
+          {/* Phase 4 (RIGHT) */}
           <div className="relative flex flex-col md:flex-row items-center">
             <div className="md:w-1/2" />
             <Dot number={4} />
@@ -84,10 +94,11 @@ export default function Roadmap() {
               <Card
                 phase="Phase 4"
                 title="Future Vision"
+                phaseNumber={4}
                 items={[
                   "To be decided by the community",
-                  "Continuous Growth & Innovation",
                   "Hatchi Charity & Donation Program",
+                  "Continuous Growth & Innovation",
                   "Your voice matters",
                 ]}
               />
@@ -111,17 +122,22 @@ function Dot({ number }) {
 }
 
 /* ---------------------------- Card ---------------------------- */
-function Card({ phase, title, items }) {
+function Card({ phase, title, items, phaseNumber }) {
+  const showCheck = ACTIVE_PHASES.includes(phaseNumber);
+
   return (
     <div className="rounded-xl p-7 border border-orange-400/30 bg-orange-900/20 backdrop-blur-sm">
       <p className="text-sm text-orange-400 mb-2 font-semibold">{phase}</p>
       <h3 className="text-2xl font-bold text-white mb-5">{title}</h3>
+
       <ul className="space-y-3 text-white text-lg">
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-2">
-            <span className="inline-block w-5 h-5 text-yellow-400 font-bold animate-pulse">
-              ✔
-            </span>
+            {showCheck && (
+              <span className="inline-block w-5 h-5 text-yellow-400 font-bold animate-pulse">
+                ✔
+              </span>
+            )}
             <span>{item}</span>
           </li>
         ))}
@@ -129,5 +145,3 @@ function Card({ phase, title, items }) {
     </div>
   );
 }
-
-
