@@ -6,12 +6,12 @@ export default function Developers() {
       image: "/jan11.jpg",
     },
     {
-      name: "BJ",
+      name: "BERN",
       role: "Marketing & Community Manager",
       image: "/bj1.jpg",
     },
     {
-      name: "BOSS REY",
+      name: "REY JAN",
       role: "Design / Graphics Lead",
       image: "/rey.jpg",
     },
@@ -53,3 +53,4 @@ export default function Developers() {
     </>
   );
 }
+
