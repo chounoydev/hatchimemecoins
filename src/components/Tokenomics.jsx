@@ -23,7 +23,7 @@ export default function Tokenomics() {
           <div className="bg-hatchiBrown/80 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
             <FaCoins className="text-4xl mx-auto mb-4 text-yellow-400" />
             <h3 className="text-xl font-bold mb-2">Total Supply</h3>
-            <p>1,000,000,000 $HATCHI</p>
+            <p>1,000,000,000</p>
           </div>
 
           {/* Liquidity Lock */}
@@ -95,4 +95,5 @@ export default function Tokenomics() {
     </>
   );
 }
+
 
