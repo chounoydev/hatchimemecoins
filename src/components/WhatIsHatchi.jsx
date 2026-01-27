@@ -98,23 +98,23 @@ export default function WhatIsHatchi() {
       {/* SLIDING BANNER */}
       <div className="w-full h-12 bg-[#d4af37] overflow-hidden flex items-center mt-24">
         <div className="flex whitespace-nowrap font-bold text-black animate-slide text-lg">
-          <span className="mx-10">🐶 $HATCHI ARYMY</span>
-          <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
-          <span className="mx-10">💰 HODL $HATCHI</span>
-          <span className="mx-10">📈 TRENDING MEMECOIN</span>
-          <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
+          <span className="mx-10">🐶 $HATCHI ARMY STRONG</span>
+          <span className="mx-10">⚖️ FAIR LAUNCH · NO PRESALE</span>
+          <span className="mx-10">💎 0% TAX · PURE HODL</span>
+          <span className="mx-10">🔒 LIQUIDITY LOCKED</span>
+          <span className="mx-10">❤️ REAL STORY · REAL COMMUNITY</span>
 
-          <span className="mx-10">🐶 $HATCHI ARYMY</span>
-          <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
-          <span className="mx-10">💰 HODL $HATCHI</span>
-          <span className="mx-10">📈 TRENDING MEMECOIN</span>
-          <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
+          <span className="mx-10">🐶 $HATCHI ARMY STRONG</span>
+          <span className="mx-10">⚖️ FAIR LAUNCH · NO PRESALE</span>
+          <span className="mx-10">💎 0% TAX · PURE HODL</span>
+          <span className="mx-10">🔒 LIQUIDITY LOCKED</span>
+          <span className="mx-10">❤️ REAL STORY · REAL COMMUNITY</span>
 
-          <span className="mx-10">🐶 $HATCHI ARYMY</span>
-          <span className="mx-10">🎯 GOAL $5M+ MARKET CAP</span>
-          <span className="mx-10">💰 HODL $HATCHI</span>
-          <span className="mx-10">📈 TRENDING MEMECOIN</span>
-          <span className="mx-10">🚀 PUMPFUN LAUNCH</span>
+          <span className="mx-10">🐶 $HATCHI ARMY STRONG</span>
+          <span className="mx-10">⚖️ FAIR LAUNCH · NO PRESALE</span>
+          <span className="mx-10">💎 0% TAX · PURE HODL</span>
+          <span className="mx-10">🔒 LIQUIDITY LOCKED</span>
+          <span className="mx-10">❤️ REAL STORY · REAL COMMUNITY</span>
         </div>
       </div>
 
@@ -155,5 +155,6 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
+
 
 
