@@ -50,7 +50,7 @@ export default function Navbar() {
           <FaXTwitter />
         </a>
         <a
-          href="https://t.me/+dRZ9t1Nsi0EyZTU1"
+          href="https://t.me/HatchiTGgroup"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-hatchiGold"
@@ -127,4 +127,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
 
