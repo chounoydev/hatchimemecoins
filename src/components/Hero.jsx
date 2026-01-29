@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
-  const contractAddress = "N/A"; // Replace with your actual contract address
+  const contractAddress = "6LSw6unnuMQqHvqE5QFkgiTKaEJBN7EJwgUA1br1pump"; // Replace with your actual contract address
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(contractAddress).then(() => {
@@ -28,7 +28,7 @@ export default function Hero() {
 
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <button className="bg-yellow-400 text-hatchiBrown px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors">
-            <a href="#" className="hover:text-hatchiGold">
+            <a href="https://pump.fun/coin/6LSw6unnuMQqHvqE5QFkgiTKaEJBN7EJwgUA1br1pump" className="hover:text-hatchiGold">
               BUY $HATCHI
             </a>
           </button>
@@ -63,5 +63,6 @@ export default function Hero() {
     </section>
   );
 }
+
 
 
