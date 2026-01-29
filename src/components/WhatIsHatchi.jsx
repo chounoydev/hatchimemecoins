@@ -10,7 +10,7 @@ export default function WhatIsHatchi() {
     const fetchPrice = async () => {
       try {
         const res = await fetch(
-          "https://api.dexscreener.com/latest/dex/pairs/solana/6LSw6unnuMQqHvqE5QFkgiTKaEJBN7EJwgUA1br1pump"
+          "https://api.dexscreener.com/latest/dex/pairs/7RB1Nqzr7LDuoUQaH6z6wgDWNvBE6zV52TnJsB6LxAzx"
         );
         const data = await res.json();
         if (!data.pairs || !data.pairs.length) return;
@@ -155,6 +155,7 @@ export default function WhatIsHatchi() {
     </section>
   );
 }
+
 
 
 
