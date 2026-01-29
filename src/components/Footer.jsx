@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="flex gap-4 mt-6">
             {/* Telegram */}
             <a
-              href="https://t.me/+dRZ9t1Nsi0EyZTU1"
+              href="https://t.me/HatchiTGgroup"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
@@ -107,5 +107,6 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
