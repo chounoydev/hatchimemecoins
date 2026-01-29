@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
-  const contractAddress = "7RB1Nqzr7LDuoUQaH6z6wgDWNvBE6zV52TnJsB6LxAzx"; // Replace with your actual contract address
+  const contractAddress = "6LSw6unnuMQqHvqE5QFkgiTKaEJBN7EJwgUA1br1pump"; // Replace with your actual contract address
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(contractAddress).then(() => {
@@ -63,6 +63,7 @@ export default function Hero() {
     </section>
   );
 }
+
 
 
 
